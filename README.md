@@ -42,6 +42,23 @@ python -m uvicorn app.main:app --reload --port 8000
 # http://127.0.0.1:8000/docs
 ```
 
+## Ejecución con Docker Compose
+
+Para un entorno reproducible que levante PostgreSQL y la API en contenedores:
+
+```bash
+# Construir imágenes y arrancar servicios (db + api)
+docker compose up --build
+
+# Aplicar semillas demo desde el contenedor de la aplicación
+docker compose exec app python scripts/seed_demo.py
+
+# (Opcional) generar un JWT local firmado dentro del contenedor
+docker compose exec app python scripts/make_jwt.py > token.txt
+```
+
+La API queda disponible en `http://127.0.0.1:8000/docs`. El contenedor ejecuta `alembic upgrade head` en el arranque, por lo que la base queda migrada automáticamente.
+
 ## Colección Postman
 
 Importa en Postman los archivos generados en la raíz del repo:
