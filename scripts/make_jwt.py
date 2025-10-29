@@ -35,8 +35,8 @@ numbers = pub.public_numbers()
 n_b64 = base64url_encode(numbers.n.to_bytes((numbers.n.bit_length() + 7)//8, "big")).decode()
 e_b64 = base64url_encode(numbers.e.to_bytes((numbers.e.bit_length() + 7)//8, "big")).decode()
 
-kid = "local-rs256"
-jwks = {"keys": [{"kty": "RSA", "use": "sig", "alg": "RS256", "kid": kid, "n": n_b64, "e": e_b64}]}
+KID = os.getenv("JWT_KID", "local-rs256")
+jwks = {"keys": [{"kty": "RSA", "use": "sig", "alg": "RS256", "kid": KID, "n": n_b64, "e": e_b64}]}
 os.makedirs(os.path.dirname(JWKS_PATH), exist_ok=True)
 with open(JWKS_PATH, "w") as f:
     json.dump(jwks, f)
@@ -50,7 +50,7 @@ claims = {
     "exp": int((now + timedelta(hours=1)).timestamp()),
     "sub": str(uuid.uuid4()),
     "tenant_id": "00000000-0000-0000-0000-000000000000",
-    "role": "Profesional",
+    "role": os.getenv("JWT_ROLE", "Profesional"),
     "scope": "api.read api.write",
 }
 
@@ -62,6 +62,6 @@ private_pem = key.private_bytes(
 )
 
 # 5) Firmar el JWT con RS256
-token = jwt.encode(claims, private_pem, algorithm="RS256", headers={"kid": kid})
+token = jwt.encode(claims, private_pem, algorithm="RS256", headers={"kid": KID})
 print(token)
 
