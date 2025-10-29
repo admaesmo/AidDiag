@@ -50,14 +50,11 @@ Para un entorno reproducible que levante PostgreSQL y la API en contenedores:
 # Construir imágenes y arrancar servicios (db + api)
 docker compose up --build
 
-# Aplicar semillas demo desde el contenedor de la aplicación
-docker compose exec app python scripts/seed_demo.py
-
 # (Opcional) generar un JWT local firmado dentro del contenedor
 docker compose exec app python scripts/make_jwt.py > token.txt
 ```
 
-La API queda disponible en `http://127.0.0.1:8000/docs`. El contenedor ejecuta `alembic upgrade head` en el arranque, por lo que la base queda migrada automáticamente.
+La API queda disponible en `http://127.0.0.1:8000/docs`. El contenedor ejecuta `alembic upgrade head` y `scripts/seed_demo.py` en el arranque, por lo que la base queda migrada y poblada automáticamente con los roles requeridos.
 
 ## Colección Postman
 

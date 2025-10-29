@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from alembic import op
 import sqlalchemy as sa
+from sqlalchemy import Column, String, Text, table
 from sqlalchemy.dialects import postgresql
 
 # revision identifiers, used by Alembic.
@@ -28,6 +29,20 @@ def upgrade() -> None:
         sa.Column("id", sa.Integer(), primary_key=True, autoincrement=True),
         sa.Column("name", sa.String(length=50), nullable=False, unique=True),
         sa.Column("description", sa.Text(), nullable=True),
+    )
+
+    roles_table = table(
+        "roles",
+        Column("name", String(length=50)),
+        Column("description", Text()),
+    )
+    op.bulk_insert(
+        roles_table,
+        [
+            {"name": "Paciente", "description": "Rol Paciente"},
+            {"name": "Profesional", "description": "Rol Profesional"},
+            {"name": "Admin", "description": "Rol Admin"},
+        ],
     )
 
     op.create_table(
@@ -105,6 +120,9 @@ def downgrade() -> None:
     op.drop_table("user_roles")
     op.drop_index("ix_users_tenant_created_at", table_name="users")
     op.drop_table("users")
+    op.execute(
+        "DELETE FROM roles WHERE name IN ('Paciente', 'Profesional', 'Admin')"
+    )
     op.drop_table("roles")
     op.drop_table("tenants")
     op.execute("DROP EXTENSION IF EXISTS citext;")

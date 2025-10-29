@@ -26,4 +26,4 @@ ENV DB_HOST=db \
     JWT_PRIVATE_KEY_PATH=app/static/private.pem \
     JWT_PUBLIC_JWKS_PATH=app/static/jwks.json
 
-CMD ["sh", "-c", "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000"]
+CMD ["sh", "-c", "alembic upgrade head && python scripts/seed_demo.py && uvicorn app.main:app --host 0.0.0.0 --port 8000"]
