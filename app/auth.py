@@ -1,56 +1,120 @@
-import json, os
-from fastapi import HTTPException, status, Depends
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+"""Authentication and authorization helpers."""
+
+from __future__ import annotations
+
+import json
+import os
+from typing import Any, Dict
+
+from fastapi import Depends, HTTPException, status
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from jose import jwt
-from typing import Dict, Any
+from jose.exceptions import ExpiredSignatureError, JWTClaimsError, JWTError
+
 
 HTTP_BEARER = HTTPBearer(auto_error=True)
 
 ISSUER = os.getenv("JWT_ISSUER", "http://localhost:8000")
 AUDIENCE = os.getenv("JWT_AUDIENCE", "aiddiag-api")
 JWKS_PATH = os.getenv("JWT_PUBLIC_JWKS_PATH", "app/static/jwks.json")
+ALLOWED_ALGORITHMS: tuple[str, ...] = ("RS256",)
 
-with open(JWKS_PATH, "r") as f:
-    JWKS = json.load(f)
 
-def _get_key(kid: str) -> Dict[str, Any]:
-    for k in JWKS.get("keys", []):
-        if k.get("kid") == kid:
-            return k
-    raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid KID")
+def _load_jwks() -> Dict[str, Any]:
+    """Load the JWKS from the configured location."""
 
-def verify_jwt(token: str) -> Dict[str, Any]:
+    if not os.path.exists(JWKS_PATH):
+        raise RuntimeError(f"JWKS file not found at {JWKS_PATH}")
+    with open(JWKS_PATH, "r", encoding="utf-8") as handler:
+        return json.load(handler)
+
+
+def _jwks_by_kid() -> Dict[str, Dict[str, Any]]:
+    """Return the JWKS indexed by key id for quick lookup."""
+
+    jwks = _load_jwks()
+    keys = jwks.get("keys", [])
+    return {k["kid"]: k for k in keys if "kid" in k}
+
+
+def _get_public_key(kid: str) -> Dict[str, Any]:
+    """Resolve a public key from the JWKS by KID."""
+
+    key = _jwks_by_kid().get(kid)
+    if not key:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Unknown signing key",
+        )
+    if key.get("alg") not in ALLOWED_ALGORITHMS:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Unsupported signing algorithm",
+        )
+    return key
+
+
+def decode_jwt(token: str) -> Dict[str, Any]:
+    """Decode and validate an RS256 JWT token."""
+
     try:
         header = jwt.get_unverified_header(token)
-        kid = header.get("kid")
-        key = _get_key(kid)
+    except JWTError as exc:  # pragma: no cover - defensive branch
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=str(exc)) from exc
 
-        from jose.utils import base64url_decode
-        from cryptography.hazmat.primitives.asymmetric import rsa
-        from cryptography.hazmat.backends import default_backend
+    kid = header.get("kid")
+    if not kid:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing key id")
 
-        n = int.from_bytes(base64url_decode(key["n"].encode()), "big")
-        e = int.from_bytes(base64url_decode(key["e"].encode()), "big")
-        public_key = rsa.RSAPublicNumbers(e, n).public_key(default_backend())
+    key = _get_public_key(kid)
 
+    try:
         claims = jwt.decode(
             token,
-            public_key,
+            key,
+            algorithms=list(ALLOWED_ALGORITHMS),
             audience=AUDIENCE,
-            options={"verify_at_hash": False, "verify_aud": True, "verify_exp": True, "verify_iss": True},
-            algorithms=[key["alg"]],
             issuer=ISSUER,
+            options={"verify_aud": True, "verify_iss": True, "verify_exp": True},
         )
-        if "tenant_id" not in claims or "role" not in claims or "sub" not in claims:
-            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid claims")
-        return claims
-    except Exception as ex:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=str(ex))
+    except ExpiredSignatureError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED, detail="Token expired"
+        ) from exc
+    except JWTClaimsError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token claims"
+        ) from exc
+    except JWTError as exc:  # pragma: no cover - defensive branch
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=str(exc)) from exc
 
-def Auth(required_roles=None):
-    def _dep(creds: HTTPAuthorizationCredentials = Depends(HTTP_BEARER)):
-        claims = verify_jwt(creds.credentials)
-        if required_roles and claims.get("role") not in required_roles:
+    for field in ("sub", "tenant_id", "role", "scope"):
+        if field not in claims or not claims[field]:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid claims")
+
+    return claims
+
+
+class Auth:
+    """FastAPI dependency that authenticates incoming requests using JWT."""
+
+    def __call__(
+        self, credentials: HTTPAuthorizationCredentials = Depends(HTTP_BEARER)
+    ) -> Dict[str, Any]:
+        token = credentials.credentials
+        return decode_jwt(token)
+
+
+def require_roles(*roles: str):
+    """Dependency factory enforcing that the caller has one of the provided roles."""
+
+    expected = {role for role in roles}
+
+    def _dependency(claims: Dict[str, Any] = Depends(Auth())) -> Dict[str, Any]:
+        role = claims.get("role")
+        if expected and role not in expected:
             raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Forbidden")
         return claims
-    return _dep
+
+    return _dependency
+
