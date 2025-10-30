@@ -1,0 +1,821 @@
+openapi: 3.1.0
+info:
+  title: AidDiag API (Local MVP)
+  version: 1.0.0
+paths:
+  /api/v1/auth/signup:
+    post:
+      tags:
+      - Auth
+      summary: Signup
+      description: Register a user in the demo tenant with a hashed password.
+      operationId: signup_api_v1_auth_signup_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignUpRequest'
+        required: true
+      responses:
+        '201':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserOut'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/auth/signin:
+    post:
+      tags:
+      - Auth
+      summary: Signin
+      description: Support both local password-based login and OIDC validation.
+      operationId: signin_api_v1_auth_signin_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              anyOf:
+              - $ref: '#/components/schemas/SignInPasswordRequest'
+              - $ref: '#/components/schemas/SignInOIDCRequest'
+              title: Payload
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthToken'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/auth/assign-role:
+    post:
+      tags:
+      - Auth
+      summary: Assign Role
+      description: Assign an existing role to a user (admin-only).
+      operationId: assign_role_api_v1_auth_assign_role_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AssignRoleRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserOut'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+      security:
+      - HTTPBearer: []
+  /api/v1/auth/mfa/enable:
+    post:
+      tags:
+      - Auth
+      summary: Enable Mfa
+      description: Simulate enabling MFA by storing a generated secret.
+      operationId: enable_mfa_api_v1_auth_mfa_enable_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EnableMFARequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserOut'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+      security:
+      - HTTPBearer: []
+  /api/v1/auth/password/reset:
+    post:
+      tags:
+      - Auth
+      summary: Password Reset
+      description: Simulated password reset that updates the hashed password.
+      operationId: password_reset_api_v1_auth_password_reset_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PasswordResetRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserOut'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+      security:
+      - HTTPBearer: []
+  /api/v1/auth/me:
+    get:
+      tags:
+      - Auth
+      summary: Me
+      description: Return the authenticated user's profile along with scopes.
+      operationId: me_api_v1_auth_me_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MeOut'
+      security:
+      - HTTPBearer: []
+  /health:
+    get:
+      summary: Health
+      description: Simple health check endpoint.
+      operationId: health_health_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                additionalProperties:
+                  type: string
+                type: object
+                title: Response Health Health Get
+  /jwks.json:
+    get:
+      summary: Jwks
+      description: Serve the JWKS used to verify locally issued tokens.
+      operationId: jwks_jwks_json_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                title: Response Jwks Jwks Json Get
+  /api/v1/symptoms:
+    post:
+      summary: Create Symptoms
+      description: Persist a symptom entry for the authenticated tenant.
+      operationId: create_symptoms_api_v1_symptoms_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SymptomEntryRequest'
+        required: true
+      responses:
+        '201':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SymptomEntryCreated'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+      security:
+      - HTTPBearer: []
+  /api/v1/predict:
+    post:
+      summary: Predict
+      description: Generate a dummy prediction, persist it and audit the call.
+      operationId: predict_api_v1_predict_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PredictRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Prediction'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+      security:
+      - HTTPBearer: []
+  /api/v1/predictions:
+    get:
+      summary: List Predictions
+      description: Return the prediction history for a patient within the tenant.
+      operationId: list_predictions_api_v1_predictions_get
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: patient_id
+        in: query
+        required: true
+        schema:
+          type: string
+          format: uuid
+          title: Patient Id
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: integer
+          maximum: 100
+          minimum: 1
+          default: 20
+          title: Limit
+      - name: offset
+        in: query
+        required: false
+        schema:
+          type: integer
+          minimum: 0
+          default: 0
+          title: Offset
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PredictionList'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/cases:
+    get:
+      summary: List Cases
+      description: List cases assigned to a professional within the tenant.
+      operationId: list_cases_api_v1_cases_get
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: assigned_to
+        in: query
+        required: true
+        schema:
+          type: string
+          format: uuid
+          title: Assigned To
+      - name: status_filter
+        in: query
+        required: false
+        schema:
+          type: string
+          default: open
+          title: Status Filter
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CaseList'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/cases/{case_id}:
+    patch:
+      summary: Patch Case
+      description: Update the status of a case belonging to the tenant.
+      operationId: patch_case_api_v1_cases__case_id__patch
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: case_id
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+          title: Case Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CasePatch'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Case'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/audit/events:
+    post:
+      summary: Audit Event
+      description: Persist an audit event for the tenant.
+      operationId: audit_event_api_v1_audit_events_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuditEventCreate'
+        required: true
+      responses:
+        '201':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuditEventCreated'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+      security:
+      - HTTPBearer: []
+components:
+  schemas:
+    AssignRoleRequest:
+      properties:
+        user_id:
+          type: string
+          format: uuid
+          title: User Id
+        role:
+          type: string
+          title: Role
+          description: Nombre del rol a asignar
+      type: object
+      required:
+      - user_id
+      - role
+      title: AssignRoleRequest
+    AuditEventCreate:
+      properties:
+        tenant_id:
+          anyOf:
+          - type: string
+            format: uuid
+          - type: 'null'
+          title: Tenant Id
+          description: Tenant de la acción (se sobrescribe con el del token)
+        action:
+          type: string
+          title: Action
+        entity:
+          type: string
+          title: Entity
+        entity_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Entity Id
+        meta:
+          anyOf:
+          - type: object
+          - type: 'null'
+          title: Meta
+      type: object
+      required:
+      - action
+      - entity
+      title: AuditEventCreate
+    AuditEventCreated:
+      properties:
+        id:
+          type: integer
+          title: Id
+        ts:
+          type: string
+          format: date-time
+          title: Ts
+      type: object
+      required:
+      - id
+      - ts
+      title: AuditEventCreated
+    AuthToken:
+      properties:
+        token:
+          type: string
+          title: Token
+        token_type:
+          type: string
+          title: Token Type
+          default: Bearer
+        expires_at:
+          type: string
+          format: date-time
+          title: Expires At
+      type: object
+      required:
+      - token
+      - expires_at
+      title: AuthToken
+    Case:
+      properties:
+        id:
+          type: string
+          format: uuid
+          title: Id
+        tenant_id:
+          type: string
+          format: uuid
+          title: Tenant Id
+        patient_id:
+          type: string
+          format: uuid
+          title: Patient Id
+        assigned_to:
+          anyOf:
+          - type: string
+            format: uuid
+          - type: 'null'
+          title: Assigned To
+        status:
+          type: string
+          title: Status
+        updated_at:
+          type: string
+          format: date-time
+          title: Updated At
+        created_at:
+          type: string
+          format: date-time
+          title: Created At
+      type: object
+      required:
+      - id
+      - tenant_id
+      - patient_id
+      - status
+      - updated_at
+      - created_at
+      title: Case
+    CaseList:
+      properties:
+        total:
+          type: integer
+          title: Total
+        items:
+          items:
+            $ref: '#/components/schemas/Case'
+          type: array
+          title: Items
+      type: object
+      required:
+      - total
+      - items
+      title: CaseList
+    CasePatch:
+      properties:
+        status:
+          type: string
+          pattern: ^(open|in_progress|closed)$
+          title: Status
+      type: object
+      required:
+      - status
+      title: CasePatch
+    EnableMFARequest:
+      properties:
+        user_id:
+          anyOf:
+          - type: string
+            format: uuid
+          - type: 'null'
+          title: User Id
+          description: Usuario al que se habilita MFA (por defecto, el propio)
+      type: object
+      title: EnableMFARequest
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    MeOut:
+      properties:
+        user:
+          $ref: '#/components/schemas/UserOut'
+        scopes:
+          items:
+            type: string
+          type: array
+          title: Scopes
+      type: object
+      required:
+      - user
+      - scopes
+      title: MeOut
+    PasswordResetRequest:
+      properties:
+        email:
+          type: string
+          pattern: ^[^@\s]+@[^@\s]+\.[^@\s]+$
+          title: Email
+        new_password:
+          type: string
+          minLength: 8
+          title: New Password
+      type: object
+      required:
+      - email
+      - new_password
+      title: PasswordResetRequest
+    PredictRequest:
+      properties:
+        tenant_id:
+          anyOf:
+          - type: string
+            format: uuid
+          - type: 'null'
+          title: Tenant Id
+          description: Tenant asociado a la predicción (se valida contra el token)
+        patient_id:
+          type: string
+          format: uuid
+          title: Patient Id
+        symptom_entry_id:
+          type: string
+          format: uuid
+          title: Symptom Entry Id
+        model_version:
+          type: string
+          title: Model Version
+          default: v1
+      type: object
+      required:
+      - patient_id
+      - symptom_entry_id
+      title: PredictRequest
+    Prediction:
+      properties:
+        id:
+          type: string
+          format: uuid
+          title: Id
+        tenant_id:
+          type: string
+          format: uuid
+          title: Tenant Id
+        patient_id:
+          type: string
+          format: uuid
+          title: Patient Id
+        symptom_entry_id:
+          type: string
+          format: uuid
+          title: Symptom Entry Id
+        model_version:
+          type: string
+          title: Model Version
+        score:
+          type: number
+          title: Score
+        label:
+          type: string
+          title: Label
+        created_at:
+          type: string
+          format: date-time
+          title: Created At
+      type: object
+      required:
+      - id
+      - tenant_id
+      - patient_id
+      - symptom_entry_id
+      - model_version
+      - score
+      - label
+      - created_at
+      title: Prediction
+    PredictionList:
+      properties:
+        total:
+          type: integer
+          title: Total
+        items:
+          items:
+            $ref: '#/components/schemas/Prediction'
+          type: array
+          title: Items
+      type: object
+      required:
+      - total
+      - items
+      title: PredictionList
+    RoleOut:
+      properties:
+        id:
+          type: integer
+          title: Id
+        name:
+          type: string
+          title: Name
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+      type: object
+      required:
+      - id
+      - name
+      title: RoleOut
+    SignInOIDCRequest:
+      properties:
+        id_token:
+          type: string
+          title: Id Token
+        access_token:
+          type: string
+          title: Access Token
+      type: object
+      required:
+      - id_token
+      - access_token
+      title: SignInOIDCRequest
+    SignInPasswordRequest:
+      properties:
+        email:
+          type: string
+          pattern: ^[^@\s]+@[^@\s]+\.[^@\s]+$
+          title: Email
+        password:
+          type: string
+          title: Password
+      type: object
+      required:
+      - email
+      - password
+      title: SignInPasswordRequest
+    SignUpRequest:
+      properties:
+        email:
+          type: string
+          pattern: ^[^@\s]+@[^@\s]+\.[^@\s]+$
+          title: Email
+          description: Email del usuario a registrar
+        password:
+          type: string
+          minLength: 8
+          title: Password
+          description: Contraseña para el login local
+        role:
+          type: string
+          title: Role
+          description: Rol inicial asignado al usuario (Paciente por defecto)
+          default: Paciente
+      type: object
+      required:
+      - email
+      - password
+      title: SignUpRequest
+    SymptomEntryCreated:
+      properties:
+        id:
+          type: string
+          format: uuid
+          title: Id
+        created_at:
+          type: string
+          format: date-time
+          title: Created At
+      type: object
+      required:
+      - id
+      - created_at
+      title: SymptomEntryCreated
+    SymptomEntryRequest:
+      properties:
+        tenant_id:
+          anyOf:
+          - type: string
+            format: uuid
+          - type: 'null'
+          title: Tenant Id
+          description: Tenant asociado a la entrada (se valida contra el token)
+        patient_id:
+          type: string
+          format: uuid
+          title: Patient Id
+        payload:
+          type: object
+          title: Payload
+      type: object
+      required:
+      - patient_id
+      - payload
+      title: SymptomEntryRequest
+    UserOut:
+      properties:
+        id:
+          type: string
+          format: uuid
+          title: Id
+        tenant_id:
+          type: string
+          format: uuid
+          title: Tenant Id
+        email:
+          type: string
+          title: Email
+        roles:
+          items:
+            $ref: '#/components/schemas/RoleOut'
+          type: array
+          title: Roles
+        mfa_enabled:
+          type: boolean
+          title: Mfa Enabled
+        status:
+          type: string
+          title: Status
+        created_at:
+          type: string
+          format: date-time
+          title: Created At
+      type: object
+      required:
+      - id
+      - tenant_id
+      - email
+      - mfa_enabled
+      - status
+      - created_at
+      title: UserOut
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+  securitySchemes:
+    HTTPBearer:
+      type: http
+      scheme: bearer

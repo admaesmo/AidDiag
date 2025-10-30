@@ -1,13 +1,22 @@
+"""FastAPI application entry point."""
+
+from __future__ import annotations
+
+import json
 import random
 from decimal import Decimal
-from fastapi import FastAPI, Depends, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy.orm import Session
+from typing import Any, Dict
 from uuid import UUID
 
-from .db import Base, engine, get_db
+from fastapi import Depends, FastAPI, HTTPException, Query, status
+from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy.orm import Session
+
 from . import models, schemas
-from .auth import Auth
+from .auth import Auth, require_roles
+from .db import get_db
+from .routers.auth import router as auth_router
+
 
 app = FastAPI(title="AidDiag API (Local MVP)", version="1.0.0")
 
@@ -19,113 +28,233 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-Base.metadata.create_all(bind=engine)
+app.include_router(auth_router, prefix="/api/v1")
+
 
 @app.get("/health")
-def health():
+def health() -> Dict[str, str]:
+    """Simple health check endpoint."""
+
     return {"status": "ok"}
 
-@app.get("/jwks.json")
-def jwks():
-    import json
-    with open("app/static/jwks.json", "r") as f:
-        return json.load(f)
 
-@app.post("/api/v1/symptoms", response_model=schemas.SymptomEntryCreated, status_code=201, dependencies=[Depends(Auth())])
-def create_symptoms(body: schemas.SymptomEntryRequest, db: Session = Depends(get_db)):
-    se = models.SymptomEntry(
-        tenant_id=body.tenant_id,
+@app.get("/jwks.json")
+def jwks() -> Dict[str, Any]:
+    """Serve the JWKS used to verify locally issued tokens."""
+
+    with open("app/static/jwks.json", "r", encoding="utf-8") as handler:
+        return json.load(handler)
+
+
+@app.post(
+    "/api/v1/symptoms",
+    response_model=schemas.SymptomEntryCreated,
+    status_code=status.HTTP_201_CREATED,
+)
+def create_symptoms(
+    body: schemas.SymptomEntryRequest,
+    db: Session = Depends(get_db),
+    claims: Dict[str, Any] = Depends(Auth()),
+) -> schemas.SymptomEntryCreated:
+    """Persist a symptom entry for the authenticated tenant."""
+
+    tenant_id = UUID(claims["tenant_id"])
+    if body.tenant_id and body.tenant_id != tenant_id:
+        raise HTTPException(status_code=400, detail="Tenant mismatch")
+
+    symptom_entry = models.SymptomEntry(
+        tenant_id=tenant_id,
         patient_id=body.patient_id,
         payload=body.payload,
     )
-    db.add(se)
+    db.add(symptom_entry)
     db.commit()
-    db.refresh(se)
-    return {"id": se.id, "created_at": se.created_at}
+    db.refresh(symptom_entry)
+    return schemas.SymptomEntryCreated.model_validate(symptom_entry)
 
-@app.post("/api/v1/predict", response_model=schemas.Prediction, dependencies=[Depends(Auth())])
-def predict(body: schemas.PredictRequest, db: Session = Depends(get_db)):
+
+@app.post(
+    "/api/v1/predict",
+    response_model=schemas.Prediction,
+    status_code=status.HTTP_200_OK,
+)
+def predict(
+    body: schemas.PredictRequest,
+    db: Session = Depends(get_db),
+    claims: Dict[str, Any] = Depends(Auth()),
+) -> schemas.Prediction:
+    """Generate a dummy prediction, persist it and audit the call."""
+
+    tenant_id = UUID(claims["tenant_id"])
+    if body.tenant_id and body.tenant_id != tenant_id:
+        raise HTTPException(status_code=400, detail="Tenant mismatch")
+
+    # Ensure the symptom entry belongs to the same tenant
+    symptom_entry = db.get(models.SymptomEntry, body.symptom_entry_id)
+    if not symptom_entry or symptom_entry.tenant_id != tenant_id:
+        raise HTTPException(status_code=404, detail="Symptom entry not found")
+    if symptom_entry.patient_id != body.patient_id:
+        raise HTTPException(status_code=400, detail="Patient mismatch")
+
     score = round(random.random(), 5)
     label = "POS" if score > 0.5 else "NEG"
-    pred = models.Prediction(
-        tenant_id=body.tenant_id,
+
+    prediction = models.Prediction(
+        tenant_id=tenant_id,
         patient_id=body.patient_id,
         symptom_entry_id=body.symptom_entry_id,
         model_version=body.model_version,
         score=Decimal(str(score)),
         label=label,
     )
-    db.add(pred)
-    db.commit()
-    db.refresh(pred)
-    return {
-        "id": pred.id,
-        "tenant_id": pred.tenant_id,
-        "patient_id": pred.patient_id,
-        "symptom_entry_id": pred.symptom_entry_id,
-        "model_version": pred.model_version,
-        "score": float(pred.score),
-        "label": pred.label,
-        "created_at": pred.created_at,
-    }
+    db.add(prediction)
+    db.flush()
 
-@app.get("/api/v1/predictions")
-def list_predictions(patient_id: UUID, limit: int = 20, offset: int = 0, db: Session = Depends(get_db), claims=Depends(Auth())):
-    q = db.query(models.Prediction).filter(
-        models.Prediction.tenant_id == UUID(claims["tenant_id"]),
-        models.Prediction.patient_id == patient_id
+    audit_event = models.AuditEvent(
+        tenant_id=tenant_id,
+        actor_sub=UUID(claims["sub"]),
+        action="predict",
+        entity="prediction",
+        entity_id=str(prediction.id),
+        meta={
+            "model_version": body.model_version,
+            "score": score,
+            "label": label,
+        },
     )
-    total = q.count()
-    items = q.order_by(models.Prediction.created_at.desc()).limit(limit).offset(offset).all()
-    def to_dict(p):
-        return {
-            "id": str(p.id), "tenant_id": str(p.tenant_id), "patient_id": str(p.patient_id),
-            "symptom_entry_id": str(p.symptom_entry_id), "model_version": p.model_version,
-            "score": float(p.score), "label": p.label, "created_at": p.created_at.isoformat()
-        }
-    return {"items": [to_dict(p) for p in items], "total": total}
+    db.add(audit_event)
+    db.commit()
+    db.refresh(prediction)
 
-@app.get("/api/v1/cases", dependencies=[Depends(Auth(required_roles=["Profesional","Admin"]))])
-def list_cases(assigned_to: UUID, status: str = "open", db: Session = Depends(get_db), claims=Depends(Auth())):
-    q = db.query(models.Case).filter(
-        models.Case.tenant_id == UUID(claims["tenant_id"]),
-        models.Case.assigned_to == assigned_to,
-        models.Case.status == status
-    ).order_by(models.Case.updated_at.desc())
-    items = q.all()
-    def to_dict(c):
-        return {
-            "id": str(c.id), "tenant_id": str(c.tenant_id), "patient_id": str(c.patient_id),
-            "assigned_to": str(c.assigned_to) if c.assigned_to else None,
-            "status": c.status, "updated_at": c.updated_at.isoformat(), "created_at": c.created_at.isoformat()
-        }
-    return {"items": [to_dict(c) for c in items], "total": len(items)}
+    return schemas.Prediction(
+        id=prediction.id,
+        tenant_id=prediction.tenant_id,
+        patient_id=prediction.patient_id,
+        symptom_entry_id=prediction.symptom_entry_id,
+        model_version=prediction.model_version,
+        score=float(prediction.score),
+        label=prediction.label,
+        created_at=prediction.created_at,
+    )
 
-@app.patch("/api/v1/cases/{case_id}", response_model=schemas.Case, dependencies=[Depends(Auth(required_roles=["Profesional","Admin"]))])
-def patch_case(case_id: UUID, body: schemas.CasePatch, db: Session = Depends(get_db), claims=Depends(Auth())):
+
+@app.get(
+    "/api/v1/predictions",
+    response_model=schemas.PredictionList,
+    status_code=status.HTTP_200_OK,
+)
+def list_predictions(
+    patient_id: UUID,
+    limit: int = Query(20, ge=1, le=100),
+    offset: int = Query(0, ge=0),
+    db: Session = Depends(get_db),
+    claims: Dict[str, Any] = Depends(Auth()),
+) -> schemas.PredictionList:
+    """Return the prediction history for a patient within the tenant."""
+
+    tenant_id = UUID(claims["tenant_id"])
+    query = (
+        db.query(models.Prediction)
+        .filter(
+            models.Prediction.tenant_id == tenant_id,
+            models.Prediction.patient_id == patient_id,
+        )
+        .order_by(models.Prediction.created_at.desc())
+    )
+    total = query.count()
+    items = query.limit(limit).offset(offset).all()
+    result = [
+        schemas.Prediction(
+            id=item.id,
+            tenant_id=item.tenant_id,
+            patient_id=item.patient_id,
+            symptom_entry_id=item.symptom_entry_id,
+            model_version=item.model_version,
+            score=float(item.score),
+            label=item.label,
+            created_at=item.created_at,
+        )
+        for item in items
+    ]
+    return schemas.PredictionList(total=total, items=result)
+
+
+@app.get(
+    "/api/v1/cases",
+    response_model=schemas.CaseList,
+)
+def list_cases(
+    assigned_to: UUID,
+    status_filter: str = Query("open"),
+    db: Session = Depends(get_db),
+    claims: Dict[str, Any] = Depends(require_roles("Profesional", "Admin")),
+) -> schemas.CaseList:
+    """List cases assigned to a professional within the tenant."""
+
+    tenant_id = UUID(claims["tenant_id"])
+    query = (
+        db.query(models.Case)
+        .filter(
+            models.Case.tenant_id == tenant_id,
+            models.Case.assigned_to == assigned_to,
+            models.Case.status == status_filter,
+        )
+        .order_by(models.Case.updated_at.desc())
+    )
+    items = query.all()
+    return schemas.CaseList(total=len(items), items=[schemas.Case.model_validate(item) for item in items])
+
+
+@app.patch(
+    "/api/v1/cases/{case_id}",
+    response_model=schemas.Case,
+)
+def patch_case(
+    case_id: UUID,
+    body: schemas.CasePatch,
+    db: Session = Depends(get_db),
+    claims: Dict[str, Any] = Depends(require_roles("Profesional", "Admin")),
+) -> schemas.Case:
+    """Update the status of a case belonging to the tenant."""
+
+    tenant_id = UUID(claims["tenant_id"])
     case = db.get(models.Case, case_id)
-    if not case or str(case.tenant_id) != claims["tenant_id"]:
+    if not case or case.tenant_id != tenant_id:
         raise HTTPException(status_code=404, detail="Case not found")
+
     case.status = body.status
     db.add(case)
     db.commit()
     db.refresh(case)
-    return {
-        "id": case.id, "tenant_id": case.tenant_id, "patient_id": case.patient_id,
-        "assigned_to": case.assigned_to, "status": case.status,
-        "updated_at": case.updated_at, "created_at": case.created_at
-    }
+    return schemas.Case.model_validate(case)
 
-@app.post("/api/v1/audit/events", status_code=201, dependencies=[Depends(Auth())])
-def audit_event(body: schemas.AuditEventCreate, db: Session = Depends(get_db), claims=Depends(Auth())):
-    evt = models.AuditEvent(
-        tenant_id=body.tenant_id,
-        actor_sub=claims["sub"],
+
+@app.post(
+    "/api/v1/audit/events",
+    response_model=schemas.AuditEventCreated,
+    status_code=status.HTTP_201_CREATED,
+)
+def audit_event(
+    body: schemas.AuditEventCreate,
+    db: Session = Depends(get_db),
+    claims: Dict[str, Any] = Depends(Auth()),
+) -> schemas.AuditEventCreated:
+    """Persist an audit event for the tenant."""
+
+    tenant_id = UUID(claims["tenant_id"])
+    if body.tenant_id and body.tenant_id != tenant_id:
+        raise HTTPException(status_code=400, detail="Tenant mismatch")
+
+    event = models.AuditEvent(
+        tenant_id=tenant_id,
+        actor_sub=UUID(claims["sub"]),
         action=body.action,
         entity=body.entity,
         entity_id=body.entity_id,
-        meta=body.meta
+        meta=body.meta,
     )
-    db.add(evt)
+    db.add(event)
     db.commit()
-    return {"id": evt.id, "ts": evt.ts}
+    db.refresh(event)
+    return schemas.AuditEventCreated(id=event.id, ts=event.ts)
+
