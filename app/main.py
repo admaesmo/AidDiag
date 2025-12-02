@@ -4,8 +4,9 @@ from __future__ import annotations
 
 import json
 import random
+from datetime import datetime
 from decimal import Decimal
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 from uuid import UUID
 
 from fastapi import Depends, FastAPI, HTTPException, Query, status
@@ -71,6 +72,59 @@ def create_symptoms(
     db.commit()
     db.refresh(symptom_entry)
     return schemas.SymptomEntryCreated.model_validate(symptom_entry)
+
+
+@app.get(
+    "/api/v1/symptoms",
+    response_model=schemas.SymptomEntryList,
+    status_code=status.HTTP_200_OK,
+)
+def list_symptom_entries(
+    patient_id: UUID,
+    limit: int = Query(20, ge=1, le=100),
+    cursor: Optional[datetime] = Query(
+        None, description="Timestamp para paginacion por cursor (keyset)"
+    ),
+    db: Session = Depends(get_db),
+    claims: Dict[str, Any] = Depends(Auth()),
+) -> schemas.SymptomEntryList:
+    """Return paginated symptom entries for a patient using cursor pagination."""
+
+    tenant_id = UUID(claims["tenant_id"])
+
+    query = (
+        db.query(models.SymptomEntry)
+        .filter(
+            models.SymptomEntry.tenant_id == tenant_id,
+            models.SymptomEntry.patient_id == patient_id,
+        )
+    )
+
+    if cursor:
+        query = query.filter(models.SymptomEntry.created_at < cursor)
+
+    query = query.order_by(models.SymptomEntry.created_at.desc())
+
+    total = query.count()
+    items = query.limit(limit + 1).all()
+
+    next_cursor = None
+    if len(items) > limit:
+        next_cursor = items[limit - 1].created_at
+        items = items[:limit]
+
+    result = [
+        schemas.SymptomEntry(
+            id=item.id,
+            tenant_id=item.tenant_id,
+            patient_id=item.patient_id,
+            symptoms=item.payload,
+            created_at=item.created_at,
+        )
+        for item in items
+    ]
+
+    return schemas.SymptomEntryList(total=total, items=result, next_cursor=next_cursor)
 
 
 @app.post(

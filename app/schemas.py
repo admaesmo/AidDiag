@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from datetime import datetime
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from uuid import UUID
 
 from pydantic import BaseModel, Field
@@ -50,6 +50,10 @@ class SignInPasswordRequest(BaseModel):
 class SignInOIDCRequest(BaseModel):
     id_token: str
     access_token: str
+
+
+class RefreshTokenRequest(BaseModel):
+    refresh_token: str
 
 
 class AssignRoleRequest(BaseModel):
@@ -156,4 +160,18 @@ class AuditEventCreate(BaseModel):
 class AuditEventCreated(BaseModel):
     id: int
     ts: datetime
+
+
+class SymptomEntry(BaseModelConfig):
+    id: UUID
+    tenant_id: UUID
+    patient_id: UUID
+    symptoms: Dict[str, Any]
+    created_at: datetime
+
+
+class SymptomEntryList(BaseModel):
+    total: int
+    items: List[SymptomEntry]
+    next_cursor: Optional[datetime] = None
 

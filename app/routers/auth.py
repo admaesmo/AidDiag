@@ -156,6 +156,30 @@ def signin(
     return schemas.AuthToken(token=payload.access_token, expires_at=expires)
 
 
+@router.post("/auth/refresh", response_model=schemas.AuthToken)
+def refresh_token(
+    payload: schemas.RefreshTokenRequest,
+    db: Session = Depends(get_db),
+) -> schemas.AuthToken:
+    """Issue a new access token using a valid refresh token."""
+
+    try:
+        claims = decode_jwt(payload.refresh_token)
+        user_id = UUID(claims["sub"])
+        tenant_id = UUID(claims["tenant_id"])
+        role_name = claims["role"]
+
+        user = db.get(models.User, user_id)
+        if not user or user.tenant_id != tenant_id:
+            raise HTTPException(status_code=401, detail="Invalid refresh token or user not found")
+
+        return _issue_local_token(user, role_name)
+    except HTTPException:
+        raise
+    except Exception as exc:  # pragma: no cover - defensive
+        raise HTTPException(status_code=401, detail=f"Invalid or expired refresh token: {exc}")
+
+
 @router.post("/auth/assign-role", response_model=schemas.UserOut)
 def assign_role(
     payload: schemas.AssignRoleRequest,

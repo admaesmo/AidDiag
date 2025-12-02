@@ -1,0 +1,1537 @@
+2025-12-01 20:37:31,805 INFO o.a.j.u.JMeterUtils: Setting Locale to es_CO
+2025-12-01 20:37:31,859 INFO o.a.j.u.JMeterUtils: Could not find resources for 'es_CO', using 'es'
+2025-12-01 20:37:31,861 INFO o.a.j.JMeter: Loading user properties from: C:\Users\mauri\Documents\Proyectos Soft\AidDiag\tools\apache-jmeter-5.6.3\bin\user.properties
+2025-12-01 20:37:31,861 INFO o.a.j.JMeter: Loading system properties from: C:\Users\mauri\Documents\Proyectos Soft\AidDiag\tools\apache-jmeter-5.6.3\bin\system.properties
+2025-12-01 20:37:31,862 INFO o.a.j.JMeter: Setting JMeter property: load_threads=50
+2025-12-01 20:37:31,862 INFO o.a.j.JMeter: Setting JMeter property: stress_threads=1000
+2025-12-01 20:37:31,875 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-12-01 20:37:31,875 INFO o.a.j.JMeter: Version 5.6.3
+2025-12-01 20:37:31,875 INFO o.a.j.JMeter: java.version=21.0.7
+2025-12-01 20:37:31,875 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-12-01 20:37:31,875 INFO o.a.j.JMeter: os.name=Windows 11
+2025-12-01 20:37:31,875 INFO o.a.j.JMeter: os.arch=amd64
+2025-12-01 20:37:31,875 INFO o.a.j.JMeter: os.version=10.0
+2025-12-01 20:37:31,877 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-12-01 20:37:31,877 INFO o.a.j.JMeter: java.awt.headless=true
+2025-12-01 20:37:31,877 INFO o.a.j.JMeter: Max memory     =2105540608
+2025-12-01 20:37:31,877 INFO o.a.j.JMeter: Available Processors =8
+2025-12-01 20:37:31,901 INFO o.a.j.JMeter: Default Locale=español (Colombia)
+2025-12-01 20:37:31,901 INFO o.a.j.JMeter: JMeter  Locale=español (Colombia)
+2025-12-01 20:37:31,901 INFO o.a.j.JMeter: JMeterHome=C:\Users\mauri\Documents\Proyectos Soft\AidDiag\tools\apache-jmeter-5.6.3
+2025-12-01 20:37:31,902 INFO o.a.j.JMeter: user.dir  =C:\Users\mauri\Documents\Proyectos Soft\AidDiag
+2025-12-01 20:37:31,903 INFO o.a.j.JMeter: PWD       =C:\Users\mauri\Documents\Proyectos Soft\AidDiag
+2025-12-01 20:37:36,886 INFO o.a.j.JMeter: IP: 192.168.56.1 Name: Principal FullName: Principal
+2025-12-01 20:37:36,928 INFO o.a.j.s.FileServer: Default base='C:\Users\mauri\Documents\Proyectos Soft\AidDiag'
+2025-12-01 20:37:36,931 INFO o.a.j.s.FileServer: Set new base='C:\Users\mauri\Documents\Proyectos Soft\AidDiag\scripts'
+2025-12-01 20:37:37,644 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-12-01 20:37:37,748 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-12-01 20:37:37,759 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-12-01 20:37:37,769 INFO o.a.j.s.SaveService: Loading file: scripts\aiddiag_local_load.jmx
+2025-12-01 20:37:37,950 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-12-01 20:37:37,950 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-12-01 20:37:37,950 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-12-01 20:37:37,950 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-12-01 20:37:37,951 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-12-01 20:37:37,951 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-12-01 20:37:38,037 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-12-01 20:37:38,093 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-12-01 20:37:38,095 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-12-01 20:37:38,095 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-12-01 20:37:38,109 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-12-01 20:37:38,109 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-12-01 20:37:38,330 INFO o.a.j.JMeter: Test lanzado (1764639458330)
+2025-12-01 20:37:38,376 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Smoke 1 user
+2025-12-01 20:37:38,376 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Smoke 1 user.
+2025-12-01 20:37:38,376 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-12-01 20:37:38,378 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2025-12-01 20:37:38,390 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-12-01 20:37:38,390 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : Load 10 users
+2025-12-01 20:37:38,390 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group Load 10 users.
+2025-12-01 20:37:38,391 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-12-01 20:37:38,391 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=50 ramp-up=30 delayedStart=false
+2025-12-01 20:37:38,398 INFO o.a.j.t.JMeterThread: Thread started: Smoke 1 user 1-1
+2025-12-01 20:37:38,401 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-1
+2025-12-01 20:37:38,477 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2025-12-01 20:37:38,477 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : Stress variable users
+2025-12-01 20:37:38,477 INFO o.a.j.e.StandardJMeterEngine: Starting 1000 threads for group Stress variable users.
+2025-12-01 20:37:38,478 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-12-01 20:37:38,478 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1000 ramp-up=240 delayedStart=false
+2025-12-01 20:37:38,480 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Principal
+2025-12-01 20:37:38,484 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-1
+2025-12-01 20:37:38,531 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-12-01 20:37:38,538 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-12-01 20:37:38,538 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-12-01 20:37:38,539 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-12-01 20:37:38,540 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-12-01 20:37:38,752 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-2
+2025-12-01 20:37:38,983 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-3
+2025-12-01 20:37:39,002 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-2
+2025-12-01 20:37:39,223 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-4
+2025-12-01 20:37:39,464 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-5
+2025-12-01 20:37:39,546 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2025-12-01 20:37:39,546 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-12-01 20:37:39,605 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-3
+2025-12-01 20:37:39,726 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-6
+2025-12-01 20:37:39,941 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-7
+2025-12-01 20:37:40,177 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-8
+2025-12-01 20:37:40,200 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-4
+2025-12-01 20:37:40,417 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-9
+2025-12-01 20:37:40,658 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-10
+2025-12-01 20:37:40,809 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-5
+2025-12-01 20:37:40,896 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-11
+2025-12-01 20:37:41,126 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-12
+2025-12-01 20:37:41,373 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-13
+2025-12-01 20:37:41,408 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-6
+2025-12-01 20:37:41,613 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-14
+2025-12-01 20:37:41,853 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-15
+2025-12-01 20:37:42,003 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-7
+2025-12-01 20:37:42,092 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-16
+2025-12-01 20:37:42,334 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-17
+2025-12-01 20:37:42,571 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-18
+2025-12-01 20:37:42,603 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-8
+2025-12-01 20:37:42,811 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-19
+2025-12-01 20:37:43,049 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-20
+2025-12-01 20:37:43,201 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-9
+2025-12-01 20:37:43,291 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-21
+2025-12-01 20:37:43,531 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-22
+2025-12-01 20:37:43,771 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-23
+2025-12-01 20:37:43,804 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-10
+2025-12-01 20:37:44,009 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-24
+2025-12-01 20:37:44,250 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-25
+2025-12-01 20:37:44,403 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-11
+2025-12-01 20:37:44,485 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-26
+2025-12-01 20:37:44,727 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-27
+2025-12-01 20:37:44,967 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-28
+2025-12-01 20:37:45,004 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-12
+2025-12-01 20:37:45,208 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-29
+2025-12-01 20:37:45,448 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-30
+2025-12-01 20:37:45,601 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-13
+2025-12-01 20:37:45,684 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-31
+2025-12-01 20:37:45,923 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-32
+2025-12-01 20:37:46,166 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-33
+2025-12-01 20:37:46,201 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-14
+2025-12-01 20:37:46,405 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-34
+2025-12-01 20:37:46,648 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-35
+2025-12-01 20:37:46,796 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-15
+2025-12-01 20:37:46,886 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-36
+2025-12-01 20:37:47,125 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-37
+2025-12-01 20:37:47,364 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-38
+2025-12-01 20:37:47,398 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-16
+2025-12-01 20:37:47,613 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-39
+2025-12-01 20:37:47,861 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-40
+2025-12-01 20:37:47,998 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-17
+2025-12-01 20:37:48,100 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-41
+2025-12-01 20:37:48,337 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-42
+2025-12-01 20:37:48,571 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-43
+2025-12-01 20:37:48,598 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-18
+2025-12-01 20:37:48,808 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-44
+2025-12-01 20:37:49,056 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-45
+2025-12-01 20:37:49,195 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-19
+2025-12-01 20:37:49,293 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-46
+2025-12-01 20:37:49,523 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-47
+2025-12-01 20:37:49,774 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-48
+2025-12-01 20:37:49,796 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-20
+2025-12-01 20:37:50,012 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-49
+2025-12-01 20:37:50,249 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-50
+2025-12-01 20:37:50,397 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-21
+2025-12-01 20:37:50,493 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-51
+2025-12-01 20:37:50,728 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-52
+2025-12-01 20:37:50,964 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-53
+2025-12-01 20:37:50,998 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-22
+2025-12-01 20:37:51,204 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-54
+2025-12-01 20:37:51,445 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-55
+2025-12-01 20:37:51,599 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-23
+2025-12-01 20:37:51,686 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-56
+2025-12-01 20:37:51,922 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-57
+2025-12-01 20:37:52,164 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-58
+2025-12-01 20:37:52,199 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-24
+2025-12-01 20:37:52,405 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-59
+2025-12-01 20:37:52,644 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-60
+2025-12-01 20:37:52,804 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-25
+2025-12-01 20:37:52,884 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-61
+2025-12-01 20:37:53,123 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-62
+2025-12-01 20:37:53,364 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-63
+2025-12-01 20:37:53,396 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-26
+2025-12-01 20:37:53,603 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-64
+2025-12-01 20:37:53,843 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-65
+2025-12-01 20:37:54,000 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-27
+2025-12-01 20:37:54,082 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-66
+2025-12-01 20:37:54,326 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-67
+2025-12-01 20:37:54,571 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-68
+2025-12-01 20:37:54,600 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-28
+2025-12-01 20:37:54,803 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-69
+2025-12-01 20:37:55,042 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-70
+2025-12-01 20:37:55,200 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-29
+2025-12-01 20:37:55,290 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-71
+2025-12-01 20:37:55,521 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-72
+2025-12-01 20:37:55,767 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-73
+2025-12-01 20:37:55,795 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-30
+2025-12-01 20:37:56,017 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-74
+2025-12-01 20:37:56,247 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-75
+2025-12-01 20:37:56,395 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-31
+2025-12-01 20:37:56,491 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-76
+2025-12-01 20:37:56,735 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-77
+2025-12-01 20:37:56,978 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-78
+2025-12-01 20:37:57,004 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-32
+2025-12-01 20:37:57,217 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-79
+2025-12-01 20:37:57,457 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-80
+2025-12-01 20:37:57,607 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-33
+2025-12-01 20:37:57,696 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-81
+2025-12-01 20:37:57,959 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-82
+2025-12-01 20:37:58,194 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-83
+2025-12-01 20:37:58,204 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-34
+2025-12-01 20:37:58,413 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-84
+2025-12-01 20:37:58,654 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-85
+2025-12-01 20:37:58,810 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-35
+2025-12-01 20:37:58,894 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-86
+2025-12-01 20:37:59,132 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-87
+2025-12-01 20:37:59,373 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-88
+2025-12-01 20:37:59,419 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-36
+2025-12-01 20:37:59,613 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-89
+2025-12-01 20:37:59,853 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-90
+2025-12-01 20:38:00,017 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-37
+2025-12-01 20:38:00,089 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-91
+2025-12-01 20:38:00,349 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-92
+2025-12-01 20:38:00,572 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-93
+2025-12-01 20:38:00,619 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-38
+2025-12-01 20:38:00,832 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-94
+2025-12-01 20:38:01,045 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-95
+2025-12-01 20:38:01,208 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-39
+2025-12-01 20:38:01,305 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-96
+2025-12-01 20:38:01,520 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-97
+2025-12-01 20:38:01,783 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-98
+2025-12-01 20:38:01,826 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-40
+2025-12-01 20:38:02,024 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-99
+2025-12-01 20:38:02,264 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-100
+2025-12-01 20:38:02,405 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-41
+2025-12-01 20:38:02,503 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-101
+2025-12-01 20:38:02,747 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-102
+2025-12-01 20:38:02,962 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-103
+2025-12-01 20:38:03,006 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-42
+2025-12-01 20:38:03,218 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-104
+2025-12-01 20:38:03,464 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-105
+2025-12-01 20:38:03,622 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-43
+2025-12-01 20:38:03,710 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-106
+2025-12-01 20:38:03,940 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-107
+2025-12-01 20:38:04,179 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-108
+2025-12-01 20:38:04,212 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-44
+2025-12-01 20:38:04,428 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-109
+2025-12-01 20:38:04,668 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-110
+2025-12-01 20:38:04,817 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-45
+2025-12-01 20:38:04,897 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-111
+2025-12-01 20:38:05,138 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-112
+2025-12-01 20:38:05,388 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-113
+2025-12-01 20:38:05,410 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-46
+2025-12-01 20:38:05,626 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-114
+2025-12-01 20:38:05,860 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-115
+2025-12-01 20:38:06,015 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-47
+2025-12-01 20:38:06,100 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-116
+2025-12-01 20:38:06,347 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-117
+2025-12-01 20:38:06,589 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-118
+2025-12-01 20:38:06,597 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-48
+2025-12-01 20:38:06,820 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-119
+2025-12-01 20:38:07,066 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-120
+2025-12-01 20:38:07,211 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-49
+2025-12-01 20:38:07,336 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-121
+2025-12-01 20:38:07,549 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-122
+2025-12-01 20:38:07,787 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-123
+2025-12-01 20:38:07,811 INFO o.a.j.t.JMeterThread: Thread started: Load 10 users 2-50
+2025-12-01 20:38:08,027 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-124
+2025-12-01 20:38:08,266 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-125
+2025-12-01 20:38:08,505 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-126
+2025-12-01 20:38:08,746 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-127
+2025-12-01 20:38:08,987 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-128
+2025-12-01 20:38:09,230 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-129
+2025-12-01 20:38:09,470 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-130
+2025-12-01 20:38:09,710 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-131
+2025-12-01 20:38:09,977 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-132
+2025-12-01 20:38:10,188 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-133
+2025-12-01 20:38:10,429 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-134
+2025-12-01 20:38:10,696 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-135
+2025-12-01 20:38:10,915 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-136
+2025-12-01 20:38:11,155 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-137
+2025-12-01 20:38:11,392 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-138
+2025-12-01 20:38:11,648 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-139
+2025-12-01 20:38:11,874 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-140
+2025-12-01 20:38:12,081 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-141
+2025-12-01 20:38:12,348 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-142
+2025-12-01 20:38:12,591 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-143
+2025-12-01 20:38:12,851 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-144
+2025-12-01 20:38:13,088 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-145
+2025-12-01 20:38:13,308 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-146
+2025-12-01 20:38:13,558 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-147
+2025-12-01 20:38:13,796 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-148
+2025-12-01 20:38:14,003 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-149
+2025-12-01 20:38:14,265 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-150
+2025-12-01 20:38:14,512 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-151
+2025-12-01 20:38:14,728 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-152
+2025-12-01 20:38:14,982 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-153
+2025-12-01 20:38:15,230 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-154
+2025-12-01 20:38:15,468 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-155
+2025-12-01 20:38:15,706 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-156
+2025-12-01 20:38:15,946 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-157
+2025-12-01 20:38:16,166 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-158
+2025-12-01 20:38:16,423 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-159
+2025-12-01 20:38:16,661 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-160
+2025-12-01 20:38:16,901 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-161
+2025-12-01 20:38:17,140 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-162
+2025-12-01 20:38:17,388 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-163
+2025-12-01 20:38:17,626 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-164
+2025-12-01 20:38:17,859 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-165
+2025-12-01 20:38:18,104 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-166
+2025-12-01 20:38:18,345 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-167
+2025-12-01 20:38:18,593 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-168
+2025-12-01 20:38:18,820 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-169
+2025-12-01 20:38:19,044 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-170
+2025-12-01 20:38:19,310 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-171
+2025-12-01 20:38:19,567 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-172
+2025-12-01 20:38:19,794 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-173
+2025-12-01 20:38:20,037 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-174
+2025-12-01 20:38:20,266 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-175
+2025-12-01 20:38:20,506 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-176
+2025-12-01 20:38:20,743 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-177
+2025-12-01 20:38:20,983 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-178
+2025-12-01 20:38:21,222 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-179
+2025-12-01 20:38:21,462 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-180
+2025-12-01 20:38:21,704 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-181
+2025-12-01 20:38:21,933 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-182
+2025-12-01 20:38:22,179 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-183
+2025-12-01 20:38:22,418 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-184
+2025-12-01 20:38:22,659 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-185
+2025-12-01 20:38:22,900 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-186
+2025-12-01 20:38:23,139 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-187
+2025-12-01 20:38:23,377 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-188
+2025-12-01 20:38:23,620 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-189
+2025-12-01 20:38:23,860 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-190
+2025-12-01 20:38:24,120 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-191
+2025-12-01 20:38:24,363 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-192
+2025-12-01 20:38:24,579 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-193
+2025-12-01 20:38:24,818 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-194
+2025-12-01 20:38:25,056 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-195
+2025-12-01 20:38:25,296 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-196
+2025-12-01 20:38:25,535 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-197
+2025-12-01 20:38:25,799 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-198
+2025-12-01 20:38:26,012 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-199
+2025-12-01 20:38:26,271 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-200
+2025-12-01 20:38:26,515 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-201
+2025-12-01 20:38:26,754 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-202
+2025-12-01 20:38:26,988 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-203
+2025-12-01 20:38:27,228 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-204
+2025-12-01 20:38:27,470 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-205
+2025-12-01 20:38:27,680 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-206
+2025-12-01 20:38:27,949 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-207
+2025-12-01 20:38:28,188 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-208
+2025-12-01 20:38:28,400 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-209
+2025-12-01 20:38:28,664 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-210
+2025-12-01 20:38:28,897 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-211
+2025-12-01 20:38:29,138 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-212
+2025-12-01 20:38:29,381 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-213
+2025-12-01 20:38:29,622 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-214
+2025-12-01 20:38:29,861 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-215
+2025-12-01 20:38:30,095 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-216
+2025-12-01 20:38:30,323 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-217
+2025-12-01 20:38:30,563 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-218
+2025-12-01 20:38:30,811 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-219
+2025-12-01 20:38:31,051 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-220
+2025-12-01 20:38:31,279 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-221
+2025-12-01 20:38:31,523 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-222
+2025-12-01 20:38:31,769 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-223
+2025-12-01 20:38:32,010 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-224
+2025-12-01 20:38:32,242 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-225
+2025-12-01 20:38:32,482 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-226
+2025-12-01 20:38:32,727 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-227
+2025-12-01 20:38:32,966 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-228
+2025-12-01 20:38:33,200 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-229
+2025-12-01 20:38:33,440 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-230
+2025-12-01 20:38:33,684 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-231
+2025-12-01 20:38:33,924 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-232
+2025-12-01 20:38:34,160 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-233
+2025-12-01 20:38:34,403 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-234
+2025-12-01 20:38:34,642 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-235
+2025-12-01 20:38:34,882 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-236
+2025-12-01 20:38:35,123 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-237
+2025-12-01 20:38:35,360 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-238
+2025-12-01 20:38:35,604 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-239
+2025-12-01 20:38:35,843 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-240
+2025-12-01 20:38:36,083 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-241
+2025-12-01 20:38:36,322 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-242
+2025-12-01 20:38:36,566 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-243
+2025-12-01 20:38:36,811 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-244
+2025-12-01 20:38:37,044 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-245
+2025-12-01 20:38:37,284 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-246
+2025-12-01 20:38:37,523 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-247
+2025-12-01 20:38:37,763 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-248
+2025-12-01 20:38:38,002 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-249
+2025-12-01 20:38:38,240 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-250
+2025-12-01 20:38:38,480 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-251
+2025-12-01 20:38:38,723 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-252
+2025-12-01 20:38:38,961 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-253
+2025-12-01 20:38:39,201 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-254
+2025-12-01 20:38:39,442 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-255
+2025-12-01 20:38:39,682 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-256
+2025-12-01 20:38:39,922 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-257
+2025-12-01 20:38:40,162 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-258
+2025-12-01 20:38:40,402 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-259
+2025-12-01 20:38:40,641 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-260
+2025-12-01 20:38:40,881 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-261
+2025-12-01 20:38:41,121 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-262
+2025-12-01 20:38:41,361 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-263
+2025-12-01 20:38:41,603 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-264
+2025-12-01 20:38:41,840 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-265
+2025-12-01 20:38:42,080 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-266
+2025-12-01 20:38:42,321 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-267
+2025-12-01 20:38:42,561 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-268
+2025-12-01 20:38:42,802 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-269
+2025-12-01 20:38:43,043 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-270
+2025-12-01 20:38:43,282 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-271
+2025-12-01 20:38:43,521 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-272
+2025-12-01 20:38:43,762 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-273
+2025-12-01 20:38:44,002 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-274
+2025-12-01 20:38:44,242 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-275
+2025-12-01 20:38:44,482 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-276
+2025-12-01 20:38:44,721 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-277
+2025-12-01 20:38:44,960 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-278
+2025-12-01 20:38:45,202 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-279
+2025-12-01 20:38:45,440 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-280
+2025-12-01 20:38:45,681 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-281
+2025-12-01 20:38:45,921 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-282
+2025-12-01 20:38:46,160 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-283
+2025-12-01 20:38:46,400 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-284
+2025-12-01 20:38:46,641 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-285
+2025-12-01 20:38:46,882 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-286
+2025-12-01 20:38:47,119 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-287
+2025-12-01 20:38:47,360 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-288
+2025-12-01 20:38:47,599 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-289
+2025-12-01 20:38:47,839 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-290
+2025-12-01 20:38:48,080 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-291
+2025-12-01 20:38:48,325 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-292
+2025-12-01 20:38:48,560 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-293
+2025-12-01 20:38:48,799 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-294
+2025-12-01 20:38:49,040 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-295
+2025-12-01 20:38:49,280 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-296
+2025-12-01 20:38:49,522 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-297
+2025-12-01 20:38:49,763 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-298
+2025-12-01 20:38:50,001 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-299
+2025-12-01 20:38:50,241 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-300
+2025-12-01 20:38:50,481 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-301
+2025-12-01 20:38:50,721 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-302
+2025-12-01 20:38:50,961 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-303
+2025-12-01 20:38:51,201 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-304
+2025-12-01 20:38:51,441 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-305
+2025-12-01 20:38:51,681 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-306
+2025-12-01 20:38:51,921 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-307
+2025-12-01 20:38:52,159 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-308
+2025-12-01 20:38:52,400 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-309
+2025-12-01 20:38:52,641 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-310
+2025-12-01 20:38:52,882 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-311
+2025-12-01 20:38:53,121 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-312
+2025-12-01 20:38:53,361 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-313
+2025-12-01 20:38:53,600 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-314
+2025-12-01 20:38:53,841 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-315
+2025-12-01 20:38:54,082 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-316
+2025-12-01 20:38:54,320 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-317
+2025-12-01 20:38:54,561 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-318
+2025-12-01 20:38:54,800 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-319
+2025-12-01 20:38:55,043 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-320
+2025-12-01 20:38:55,281 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-321
+2025-12-01 20:38:55,523 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-322
+2025-12-01 20:38:55,762 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-323
+2025-12-01 20:38:56,000 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-324
+2025-12-01 20:38:56,244 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-325
+2025-12-01 20:38:56,493 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-326
+2025-12-01 20:38:56,721 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-327
+2025-12-01 20:38:56,964 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-328
+2025-12-01 20:38:57,212 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-329
+2025-12-01 20:38:57,454 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-330
+2025-12-01 20:38:57,691 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-331
+2025-12-01 20:38:57,931 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-332
+2025-12-01 20:38:58,181 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-333
+2025-12-01 20:38:58,421 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-334
+2025-12-01 20:38:58,650 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-335
+2025-12-01 20:38:58,889 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-336
+2025-12-01 20:38:59,141 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-337
+2025-12-01 20:38:59,400 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-338
+2025-12-01 20:38:59,625 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-339
+2025-12-01 20:38:59,873 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-340
+2025-12-01 20:39:00,100 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-341
+2025-12-01 20:39:00,354 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-342
+2025-12-01 20:39:00,594 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-343
+2025-12-01 20:39:00,832 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-344
+2025-12-01 20:39:01,070 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-345
+2025-12-01 20:39:01,309 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-346
+2025-12-01 20:39:01,548 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-347
+2025-12-01 20:39:01,791 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-348
+2025-12-01 20:39:02,029 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-349
+2025-12-01 20:39:02,248 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-350
+2025-12-01 20:39:02,509 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-351
+2025-12-01 20:39:02,750 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-352
+2025-12-01 20:39:02,984 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-353
+2025-12-01 20:39:03,225 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-354
+2025-12-01 20:39:03,467 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-355
+2025-12-01 20:39:03,704 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-356
+2025-12-01 20:39:03,953 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-357
+2025-12-01 20:39:04,192 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-358
+2025-12-01 20:39:04,424 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-359
+2025-12-01 20:39:04,674 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-360
+2025-12-01 20:39:04,903 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-361
+2025-12-01 20:39:05,141 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-362
+2025-12-01 20:39:05,377 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-363
+2025-12-01 20:39:05,617 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-364
+2025-12-01 20:39:05,855 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-365
+2025-12-01 20:39:06,098 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-366
+2025-12-01 20:39:06,323 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-367
+2025-12-01 20:39:06,563 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-368
+2025-12-01 20:39:06,801 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-369
+2025-12-01 20:39:07,042 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-370
+2025-12-01 20:39:07,281 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-371
+2025-12-01 20:39:07,521 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-372
+2025-12-01 20:39:07,764 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-373
+2025-12-01 20:39:08,004 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-374
+2025-12-01 20:39:08,242 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-375
+2025-12-01 20:39:08,483 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-376
+2025-12-01 20:39:08,720 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-377
+2025-12-01 20:39:08,960 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-378
+2025-12-01 20:39:09,201 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-379
+2025-12-01 20:39:09,440 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-380
+2025-12-01 20:39:09,679 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-381
+2025-12-01 20:39:09,919 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-382
+2025-12-01 20:39:10,160 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-383
+2025-12-01 20:39:10,402 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-384
+2025-12-01 20:39:10,643 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-385
+2025-12-01 20:39:10,881 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-386
+2025-12-01 20:39:11,121 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-387
+2025-12-01 20:39:11,362 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-388
+2025-12-01 20:39:11,601 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-389
+2025-12-01 20:39:11,841 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-390
+2025-12-01 20:39:12,082 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-391
+2025-12-01 20:39:12,321 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-392
+2025-12-01 20:39:12,560 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-393
+2025-12-01 20:39:12,800 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-394
+2025-12-01 20:39:13,041 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-395
+2025-12-01 20:39:13,280 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-396
+2025-12-01 20:39:13,519 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-397
+2025-12-01 20:39:13,761 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-398
+2025-12-01 20:39:14,001 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-399
+2025-12-01 20:39:14,240 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-400
+2025-12-01 20:39:14,481 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-401
+2025-12-01 20:39:14,721 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-402
+2025-12-01 20:39:14,959 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-403
+2025-12-01 20:39:15,199 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-404
+2025-12-01 20:39:15,441 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-405
+2025-12-01 20:39:15,680 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-406
+2025-12-01 20:39:15,919 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-407
+2025-12-01 20:39:16,160 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-408
+2025-12-01 20:39:16,399 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-409
+2025-12-01 20:39:16,639 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-410
+2025-12-01 20:39:16,882 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-411
+2025-12-01 20:39:17,121 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-412
+2025-12-01 20:39:17,359 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-413
+2025-12-01 20:39:17,601 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-414
+2025-12-01 20:39:17,840 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-415
+2025-12-01 20:39:18,080 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-416
+2025-12-01 20:39:18,319 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-417
+2025-12-01 20:39:18,559 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-418
+2025-12-01 20:39:18,800 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-419
+2025-12-01 20:39:19,041 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-420
+2025-12-01 20:39:19,281 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-421
+2025-12-01 20:39:19,521 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-422
+2025-12-01 20:39:19,760 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-423
+2025-12-01 20:39:20,001 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-424
+2025-12-01 20:39:20,244 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-425
+2025-12-01 20:39:20,485 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-426
+2025-12-01 20:39:20,724 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-427
+2025-12-01 20:39:20,963 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-428
+2025-12-01 20:39:21,202 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-429
+2025-12-01 20:39:21,521 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-430
+2025-12-01 20:39:21,748 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-431
+2025-12-01 20:39:21,929 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-432
+2025-12-01 20:39:22,164 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-433
+2025-12-01 20:39:22,401 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-434
+2025-12-01 20:39:22,642 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-435
+2025-12-01 20:39:22,897 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-436
+2025-12-01 20:39:23,136 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-437
+2025-12-01 20:39:23,398 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-438
+2025-12-01 20:39:23,621 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-439
+2025-12-01 20:39:23,884 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-440
+2025-12-01 20:39:24,118 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-441
+2025-12-01 20:39:24,356 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-442
+2025-12-01 20:39:24,604 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-443
+2025-12-01 20:39:24,836 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-444
+2025-12-01 20:39:25,076 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-445
+2025-12-01 20:39:25,314 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-446
+2025-12-01 20:39:25,564 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-447
+2025-12-01 20:39:25,791 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-448
+2025-12-01 20:39:26,034 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-449
+2025-12-01 20:39:26,274 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-450
+2025-12-01 20:39:26,511 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-451
+2025-12-01 20:39:26,750 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-452
+2025-12-01 20:39:26,989 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-453
+2025-12-01 20:39:27,230 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-454
+2025-12-01 20:39:27,471 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-455
+2025-12-01 20:39:27,727 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-456
+2025-12-01 20:39:27,948 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-457
+2025-12-01 20:39:28,176 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-458
+2025-12-01 20:39:28,427 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-459
+2025-12-01 20:39:28,667 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-460
+2025-12-01 20:39:28,902 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-461
+2025-12-01 20:39:29,142 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-462
+2025-12-01 20:39:29,382 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-463
+2025-12-01 20:39:29,619 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-464
+2025-12-01 20:39:29,862 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-465
+2025-12-01 20:39:30,100 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-466
+2025-12-01 20:39:30,336 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-467
+2025-12-01 20:39:30,577 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-468
+2025-12-01 20:39:30,816 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-469
+2025-12-01 20:39:31,056 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-470
+2025-12-01 20:39:31,282 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-471
+2025-12-01 20:39:31,533 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-472
+2025-12-01 20:39:31,775 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-473
+2025-12-01 20:39:32,015 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-474
+2025-12-01 20:39:32,252 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-475
+2025-12-01 20:39:32,501 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-476
+2025-12-01 20:39:32,721 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-477
+2025-12-01 20:39:32,973 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-478
+2025-12-01 20:39:33,213 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-479
+2025-12-01 20:39:33,453 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-480
+2025-12-01 20:39:33,691 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-481
+2025-12-01 20:39:33,930 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-482
+2025-12-01 20:39:34,179 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-483
+2025-12-01 20:39:34,412 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-484
+2025-12-01 20:39:34,645 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-485
+2025-12-01 20:39:34,890 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-486
+2025-12-01 20:39:35,131 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-487
+2025-12-01 20:39:35,373 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-488
+2025-12-01 20:39:35,610 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-489
+2025-12-01 20:39:35,841 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-490
+2025-12-01 20:39:36,089 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-491
+2025-12-01 20:39:36,328 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-492
+2025-12-01 20:39:36,567 INFO o.a.j.t.JMeterThread: Thread started: Stress variable users 3-493
+2025-12-01 20:39:36,806 INFO o.a.j.t.JMeterT2025-12-01 20:55:30,012 INFO o.a.j.r.Summariser: summary +   1745 in 00:17:30 =    1,7/s Avg: 275088 Min:  3147 Max: 1042338 Err:  1624 (93,07%) Active: 450 Started: 451 Finished: 1
+2025-12-01 20:55:30,021 INFO o.a.j.r.Summariser: summary =   4967 in 00:34:23 =    2,4/s Avg: 165636 Min:  3147 Max: 1042338 Err:  4797 (96,58%)
+2025-12-01 20:56:00,018 INFO o.a.j.r.Summariser: summary +    149 in 00:00:30 =    5,0/s Avg: 286285 Min:  3537 Max: 789742 Err:   149 (100,00%) Active: 450 Started: 451 Finished: 1
+2025-12-01 20:56:00,022 INFO o.a.j.r.Summariser: summary =   5116 in 00:34:53 =    2,4/s Avg: 169149 Min:  3147 Max: 1042338 Err:  4946 (96,68%)
+2025-12-01 20:56:26,440 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-4
+2025-12-01 20:56:26,441 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-4
+2025-12-01 20:56:26,447 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-5
+2025-12-01 20:56:26,448 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-5
+2025-12-01 20:56:26,494 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-9
+2025-12-01 20:56:26,494 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-7
+2025-12-01 20:56:26,494 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-9
+2025-12-01 20:56:26,494 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-7
+2025-12-01 20:56:26,510 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-8
+2025-12-01 20:56:26,511 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-8
+2025-12-01 20:56:26,520 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-11
+2025-12-01 20:56:26,520 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-11
+2025-12-01 20:56:26,521 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-10
+2025-12-01 20:56:26,521 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-10
+2025-12-01 20:56:26,526 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-12
+2025-12-01 20:56:26,526 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-12
+2025-12-01 20:56:26,530 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-13
+2025-12-01 20:56:26,530 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-13
+2025-12-01 20:56:26,538 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-14
+2025-12-01 20:56:26,538 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-14
+2025-12-01 20:56:26,540 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-15
+2025-12-01 20:56:26,540 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-15
+2025-12-01 20:56:26,555 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-16
+2025-12-01 20:56:26,555 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-16
+2025-12-01 20:56:26,557 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-17
+2025-12-01 20:56:26,558 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-17
+2025-12-01 20:56:26,566 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-19
+2025-12-01 20:56:26,566 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-19
+2025-12-01 20:56:26,569 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-18
+2025-12-01 20:56:26,570 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-18
+2025-12-01 20:56:26,575 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-21
+2025-12-01 20:56:26,575 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-21
+2025-12-01 20:56:26,578 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-24
+2025-12-01 20:56:26,578 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-24
+2025-12-01 20:56:26,581 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-20
+2025-12-01 20:56:26,582 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-20
+2025-12-01 20:56:26,607 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-23
+2025-12-01 20:56:26,607 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-23
+2025-12-01 20:56:26,663 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-67
+2025-12-01 20:56:26,663 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-67
+2025-12-01 20:56:26,671 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-22
+2025-12-01 20:56:26,671 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-22
+2025-12-01 20:56:27,254 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-72
+2025-12-01 20:56:27,254 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-72
+2025-12-01 20:56:27,361 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-25
+2025-12-01 20:56:27,362 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-25
+2025-12-01 20:56:27,994 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-28
+2025-12-01 20:56:27,994 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-28
+2025-12-01 20:56:28,020 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-31
+2025-12-01 20:56:28,020 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-26
+2025-12-01 20:56:28,020 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-31
+2025-12-01 20:56:28,020 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-26
+2025-12-01 20:56:28,053 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-33
+2025-12-01 20:56:28,053 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-30
+2025-12-01 20:56:28,053 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-33
+2025-12-01 20:56:28,053 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-30
+2025-12-01 20:56:28,054 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-27
+2025-12-01 20:56:28,054 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-27
+2025-12-01 20:56:28,055 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-29
+2025-12-01 20:56:28,055 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-29
+2025-12-01 20:56:28,076 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-35
+2025-12-01 20:56:28,076 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-35
+2025-12-01 20:56:28,095 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-71
+2025-12-01 20:56:28,095 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-75
+2025-12-01 20:56:28,095 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-75
+2025-12-01 20:56:28,095 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-79
+2025-12-01 20:56:28,096 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-79
+2025-12-01 20:56:28,095 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-71
+2025-12-01 20:56:28,100 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-32
+2025-12-01 20:56:28,100 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-32
+2025-12-01 20:56:28,106 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-34
+2025-12-01 20:56:28,106 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-78
+2025-12-01 20:56:28,107 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-34
+2025-12-01 20:56:28,107 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-78
+2025-12-01 20:56:28,107 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-81
+2025-12-01 20:56:28,107 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-81
+2025-12-01 20:56:28,108 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-76
+2025-12-01 20:56:28,109 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-76
+2025-12-01 20:56:28,150 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-84
+2025-12-01 20:56:28,150 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-88
+2025-12-01 20:56:28,150 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-83
+2025-12-01 20:56:28,150 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-82
+2025-12-01 20:56:28,151 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-83
+2025-12-01 20:56:28,151 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-88
+2025-12-01 20:56:28,151 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-84
+2025-12-01 20:56:28,151 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-80
+2025-12-01 20:56:28,151 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-80
+2025-12-01 20:56:28,151 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-77
+2025-12-01 20:56:28,151 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-82
+2025-12-01 20:56:28,152 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-77
+2025-12-01 20:56:28,153 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-74
+2025-12-01 20:56:28,153 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-74
+2025-12-01 20:56:28,178 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-38
+2025-12-01 20:56:28,178 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-36
+2025-12-01 20:56:28,178 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-38
+2025-12-01 20:56:28,178 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-39
+2025-12-01 20:56:28,178 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-40
+2025-12-01 20:56:28,178 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-39
+2025-12-01 20:56:28,178 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-40
+2025-12-01 20:56:28,178 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-36
+2025-12-01 20:56:28,204 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-42
+2025-12-01 20:56:28,204 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-42
+2025-12-01 20:56:28,205 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-37
+2025-12-01 20:56:28,205 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-37
+2025-12-01 20:56:28,205 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-41
+2025-12-01 20:56:28,207 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-41
+2025-12-01 20:56:28,228 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-49
+2025-12-01 20:56:28,228 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-48
+2025-12-01 20:56:28,228 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-49
+2025-12-01 20:56:28,228 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-48
+2025-12-01 20:56:28,228 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-50
+2025-12-01 20:56:28,229 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-44
+2025-12-01 20:56:28,229 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-44
+2025-12-01 20:56:28,229 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-50
+2025-12-01 20:56:28,229 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-45
+2025-12-01 20:56:28,229 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-45
+2025-12-01 20:56:28,229 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-46
+2025-12-01 20:56:28,229 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-46
+2025-12-01 20:56:28,229 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-43
+2025-12-01 20:56:28,229 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-43
+2025-12-01 20:56:28,232 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-47
+2025-12-01 20:56:28,232 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-47
+2025-12-01 20:56:28,291 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-59
+2025-12-01 20:56:28,291 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-59
+2025-12-01 20:56:28,291 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-58
+2025-12-01 20:56:28,291 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-58
+2025-12-01 20:56:28,291 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-65
+2025-12-01 20:56:28,292 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-65
+2025-12-01 20:56:28,292 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-51
+2025-12-01 20:56:28,292 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-51
+2025-12-01 20:56:28,295 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-63
+2025-12-01 20:56:28,295 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-60
+2025-12-01 20:56:28,295 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-60
+2025-12-01 20:56:28,296 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-156
+2025-12-01 20:56:28,296 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-64
+2025-12-01 20:56:28,296 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-156
+2025-12-01 20:56:28,295 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-68
+2025-12-01 20:56:28,295 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-63
+2025-12-01 20:56:28,296 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-68
+2025-12-01 20:56:28,297 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-64
+2025-12-01 20:56:28,302 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-66
+2025-12-01 20:56:28,303 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-66
+2025-12-01 20:56:28,331 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-157
+2025-12-01 20:56:28,331 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-157
+2025-12-01 20:56:28,333 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-155
+2025-12-01 20:56:28,333 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-155
+2025-12-01 20:56:28,333 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-160
+2025-12-01 20:56:28,333 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-160
+2025-12-01 20:56:28,336 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-87
+2025-12-01 20:56:28,336 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-87
+2025-12-01 20:56:28,337 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-158
+2025-12-01 20:56:28,337 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-158
+2025-12-01 20:56:28,343 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-85
+2025-12-01 20:56:28,343 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-85
+2025-12-01 20:56:28,373 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-92
+2025-12-01 20:56:28,373 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-162
+2025-12-01 20:56:28,373 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-167
+2025-12-01 20:56:28,373 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-92
+2025-12-01 20:56:28,373 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-167
+2025-12-01 20:56:28,373 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-162
+2025-12-01 20:56:28,373 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-153
+2025-12-01 20:56:28,375 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-153
+2025-12-01 20:56:28,375 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-89
+2025-12-01 20:56:28,373 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-96
+2025-12-01 20:56:28,375 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-89
+2025-12-01 20:56:28,375 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-96
+2025-12-01 20:56:28,373 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-163
+2025-12-01 20:56:28,375 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-163
+2025-12-01 20:56:28,375 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-152
+2025-12-01 20:56:28,376 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-152
+2025-12-01 20:56:28,376 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-161
+2025-12-01 20:56:28,377 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-161
+2025-12-01 20:56:28,377 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-164
+2025-12-01 20:56:28,377 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-164
+2025-12-01 20:56:28,375 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-86
+2025-12-01 20:56:28,378 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-86
+2025-12-01 20:56:28,427 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-91
+2025-12-01 20:56:28,427 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-91
+2025-12-01 20:56:28,427 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-93
+2025-12-01 20:56:28,428 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-93
+2025-12-01 20:56:28,428 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-90
+2025-12-01 20:56:28,428 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-90
+2025-12-01 20:56:28,428 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-165
+2025-12-01 20:56:28,428 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-165
+2025-12-01 20:56:28,428 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-159
+2025-12-01 20:56:28,428 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-159
+2025-12-01 20:56:28,430 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-94
+2025-12-01 20:56:28,430 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-94
+2025-12-01 20:56:28,430 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-97
+2025-12-01 20:56:28,430 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-97
+2025-12-01 20:56:28,493 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-98
+2025-12-01 20:56:28,494 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-98
+2025-12-01 20:56:28,495 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-95
+2025-12-01 20:56:28,495 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-95
+2025-12-01 20:56:28,502 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-106
+2025-12-01 20:56:28,503 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-106
+2025-12-01 20:56:28,528 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-107
+2025-12-01 20:56:28,528 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-107
+2025-12-01 20:56:28,534 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-109
+2025-12-01 20:56:28,534 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-109
+2025-12-01 20:56:28,548 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-110
+2025-12-01 20:56:28,548 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-110
+2025-12-01 20:56:28,548 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-108
+2025-12-01 20:56:28,550 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-108
+2025-12-01 20:56:28,650 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-127
+2025-12-01 20:56:28,650 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-127
+2025-12-01 20:56:28,650 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-113
+2025-12-01 20:56:28,650 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-111
+2025-12-01 20:56:28,650 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-112
+2025-12-01 20:56:28,650 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-117
+2025-12-01 20:56:28,650 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-118
+2025-12-01 20:56:28,653 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-117
+2025-12-01 20:56:28,653 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-113
+2025-12-01 20:56:28,653 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-112
+2025-12-01 20:56:28,653 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-118
+2025-12-01 20:56:28,653 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-114
+2025-12-01 20:56:28,653 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-114
+2025-12-01 20:56:28,653 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-123
+2025-12-01 20:56:28,653 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-123
+2025-12-01 20:56:28,654 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-119
+2025-12-01 20:56:28,654 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-119
+2025-12-01 20:56:28,654 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-116
+2025-12-01 20:56:28,654 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-116
+2025-12-01 20:56:28,654 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-121
+2025-12-01 20:56:28,654 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-121
+2025-12-01 20:56:28,654 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-124
+2025-12-01 20:56:28,650 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-111
+2025-12-01 20:56:28,654 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-124
+2025-12-01 20:56:28,655 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-126
+2025-12-01 20:56:28,656 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-126
+2025-12-01 20:56:28,660 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-125
+2025-12-01 20:56:28,660 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-131
+2025-12-01 20:56:28,660 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-125
+2025-12-01 20:56:28,660 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-131
+2025-12-01 20:56:28,695 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-130
+2025-12-01 20:56:28,696 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-130
+2025-12-01 20:56:28,698 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-122
+2025-12-01 20:56:28,698 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-122
+2025-12-01 20:56:28,741 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-132
+2025-12-01 20:56:28,741 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-132
+2025-12-01 20:56:28,743 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-120
+2025-12-01 20:56:28,743 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-120
+2025-12-01 20:56:28,750 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-140
+2025-12-01 20:56:28,750 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-140
+2025-12-01 20:56:28,782 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-134
+2025-12-01 20:56:28,782 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-129
+2025-12-01 20:56:28,782 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-134
+2025-12-01 20:56:28,782 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-129
+2025-12-01 20:56:28,784 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-128
+2025-12-01 20:56:28,784 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-128
+2025-12-01 20:56:28,786 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-142
+2025-12-01 20:56:28,786 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-142
+2025-12-01 20:56:28,787 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-148
+2025-12-01 20:56:28,787 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-148
+2025-12-01 20:56:28,787 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-138
+2025-12-01 20:56:28,787 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-139
+2025-12-01 20:56:28,788 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-138
+2025-12-01 20:56:28,788 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-139
+2025-12-01 20:56:28,793 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-144
+2025-12-01 20:56:28,793 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-144
+2025-12-01 20:56:28,793 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-136
+2025-12-01 20:56:28,793 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-136
+2025-12-01 20:56:28,853 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-133
+2025-12-01 20:56:28,853 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-133
+2025-12-01 20:56:28,853 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-141
+2025-12-01 20:56:28,853 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-141
+2025-12-01 20:56:28,857 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-146
+2025-12-01 20:56:28,857 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-146
+2025-12-01 20:56:28,857 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-145
+2025-12-01 20:56:28,857 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-145
+2025-12-01 20:56:28,857 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-143
+2025-12-01 20:56:28,857 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-137
+2025-12-01 20:56:28,858 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-143
+2025-12-01 20:56:28,858 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-137
+2025-12-01 20:56:28,867 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-151
+2025-12-01 20:56:28,868 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-151
+2025-12-01 20:56:28,900 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-147
+2025-12-01 20:56:28,900 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-147
+2025-12-01 20:56:28,900 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-149
+2025-12-01 20:56:28,900 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-149
+2025-12-01 20:56:28,904 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-154
+2025-12-01 20:56:28,904 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-154
+2025-12-01 20:56:28,905 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-150
+2025-12-01 20:56:28,905 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-150
+2025-12-01 20:56:30,126 INFO o.a.j.r.Summariser: summary +    350 in 00:00:30 =   11,6/s Avg: 100115 Min: 28001 Max: 846955 Err:   339 (96,86%) Active: 308 Started: 451 Finished: 143
+2025-12-01 20:56:30,127 INFO o.a.j.r.Summariser: summary =   5466 in 00:35:23 =    2,6/s Avg: 164729 Min:  3147 Max: 1042338 Err:  5285 (96,69%)
+2025-12-01 20:56:30,770 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-259
+2025-12-01 20:56:30,770 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-259
+2025-12-01 20:56:30,777 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-248
+2025-12-01 20:56:30,777 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-248
+2025-12-01 20:56:30,787 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-257
+2025-12-01 20:56:30,787 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-257
+2025-12-01 20:56:30,792 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-265
+2025-12-01 20:56:30,792 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-265
+2025-12-01 20:56:31,312 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-255
+2025-12-01 20:56:31,312 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-255
+2025-12-01 20:56:31,320 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-258
+2025-12-01 20:56:31,320 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-263
+2025-12-01 20:56:31,320 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-258
+2025-12-01 20:56:31,320 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-263
+2025-12-01 20:56:31,325 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-269
+2025-12-01 20:56:31,325 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-269
+2025-12-01 20:56:31,325 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-262
+2025-12-01 20:56:31,325 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-262
+2025-12-01 20:56:31,330 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-266
+2025-12-01 20:56:31,331 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-266
+2025-12-01 20:56:31,331 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-261
+2025-12-01 20:56:31,331 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-261
+2025-12-01 20:56:31,331 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-270
+2025-12-01 20:56:31,331 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-270
+2025-12-01 20:56:31,491 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-260
+2025-12-01 20:56:31,491 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-260
+2025-12-01 20:56:31,498 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-281
+2025-12-01 20:56:31,498 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-281
+2025-12-01 20:56:31,577 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-275
+2025-12-01 20:56:31,577 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-267
+2025-12-01 20:56:31,577 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-275
+2025-12-01 20:56:31,577 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-267
+2025-12-01 20:56:31,647 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-277
+2025-12-01 20:56:31,647 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-280
+2025-12-01 20:56:31,647 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-280
+2025-12-01 20:56:31,647 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-277
+2025-12-01 20:56:31,647 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-276
+2025-12-01 20:56:31,647 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-276
+2025-12-01 20:56:31,654 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-268
+2025-12-01 20:56:31,654 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-268
+2025-12-01 20:56:31,654 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-282
+2025-12-01 20:56:31,654 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-272
+2025-12-01 20:56:31,654 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-273
+2025-12-01 20:56:31,654 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-282
+2025-12-01 20:56:31,654 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-272
+2025-12-01 20:56:31,654 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-264
+2025-12-01 20:56:31,654 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-273
+2025-12-01 20:56:31,655 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-264
+2025-12-01 20:56:31,661 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-279
+2025-12-01 20:56:31,661 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-292
+2025-12-01 20:56:31,662 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-279
+2025-12-01 20:56:31,662 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-292
+2025-12-01 20:56:31,668 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-284
+2025-12-01 20:56:31,668 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-283
+2025-12-01 20:56:31,668 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-284
+2025-12-01 20:56:31,668 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-283
+2025-12-01 20:56:31,674 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-290
+2025-12-01 20:56:31,674 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-288
+2025-12-01 20:56:31,674 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-286
+2025-12-01 20:56:31,674 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-289
+2025-12-01 20:56:31,674 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-290
+2025-12-01 20:56:31,674 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-293
+2025-12-01 20:56:31,674 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-278
+2025-12-01 20:56:31,674 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-278
+2025-12-01 20:56:31,674 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-286
+2025-12-01 20:56:31,674 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-293
+2025-12-01 20:56:31,674 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-288
+2025-12-01 20:56:31,674 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-289
+2025-12-01 20:56:31,685 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-285
+2025-12-01 20:56:31,685 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-294
+2025-12-01 20:56:31,685 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-294
+2025-12-01 20:56:31,685 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-285
+2025-12-01 20:56:31,693 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-298
+2025-12-01 20:56:31,694 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-298
+2025-12-01 20:56:31,718 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-291
+2025-12-01 20:56:31,718 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-287
+2025-12-01 20:56:31,718 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-291
+2025-12-01 20:56:31,718 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-287
+2025-12-01 20:56:31,718 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-304
+2025-12-01 20:56:31,719 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-304
+2025-12-01 20:56:31,732 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-303
+2025-12-01 20:56:31,732 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-301
+2025-12-01 20:56:31,732 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-303
+2025-12-01 20:56:31,732 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-301
+2025-12-01 20:56:31,740 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-295
+2025-12-01 20:56:31,740 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-295
+2025-12-01 20:56:31,758 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-306
+2025-12-01 20:56:31,758 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-306
+2025-12-01 20:56:31,758 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-300
+2025-12-01 20:56:31,759 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-297
+2025-12-01 20:56:31,759 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-300
+2025-12-01 20:56:31,759 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-297
+2025-12-01 20:56:31,760 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-299
+2025-12-01 20:56:31,760 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-299
+2025-12-01 20:56:31,760 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-296
+2025-12-01 20:56:31,761 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-296
+2025-12-01 20:56:31,773 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-307
+2025-12-01 20:56:31,773 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-305
+2025-12-01 20:56:31,773 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-307
+2025-12-01 20:56:31,773 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-305
+2025-12-01 20:56:31,797 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-311
+2025-12-01 20:56:31,797 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-311
+2025-12-01 20:56:31,819 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-302
+2025-12-01 20:56:31,819 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-312
+2025-12-01 20:56:31,819 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-302
+2025-12-01 20:56:31,819 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-312
+2025-12-01 20:56:31,827 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-315
+2025-12-01 20:56:31,827 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-315
+2025-12-01 20:56:32,005 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-318
+2025-12-01 20:56:32,005 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-314
+2025-12-01 20:56:32,006 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-314
+2025-12-01 20:56:32,006 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-318
+2025-12-01 20:56:32,020 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-313
+2025-12-01 20:56:32,021 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-313
+2025-12-01 20:56:32,060 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-316
+2025-12-01 20:56:32,060 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-319
+2025-12-01 20:56:32,060 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-317
+2025-12-01 20:56:32,060 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-317
+2025-12-01 20:56:32,060 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-323
+2025-12-01 20:56:32,060 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-323
+2025-12-01 20:56:32,060 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-316
+2025-12-01 20:56:32,061 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-319
+2025-12-01 20:56:32,088 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-320
+2025-12-01 20:56:32,088 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-320
+2025-12-01 20:57:00,060 INFO o.a.j.r.Summariser: summary +    148 in 00:00:30 =    4,9/s Avg: 41196 Min: 31981 Max: 425174 Err:   147 (99,32%) Active: 246 Started: 451 Finished: 205
+2025-12-01 20:57:00,060 INFO o.a.j.r.Summariser: summary =   5614 in 00:35:53 =    2,6/s Avg: 161472 Min:  3147 Max: 1042338 Err:  5432 (96,76%)
+2025-12-01 20:57:30,323 INFO o.a.j.r.Summariser: summary +     23 in 00:00:30 =    0,8/s Avg: 94257 Min: 33626 Max: 122890 Err:    11 (47,83%) Active: 246 Started: 451 Finished: 205
+2025-12-01 20:57:30,325 INFO o.a.j.r.Summariser: summary =   5637 in 00:36:23 =    2,6/s Avg: 161198 Min:  3147 Max: 1042338 Err:  5443 (96,56%)
+2025-12-01 20:57:32,394 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-342
+2025-12-01 20:57:32,394 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-342
+2025-12-01 20:57:32,394 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-337
+2025-12-01 20:57:32,394 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-337
+2025-12-01 20:57:32,405 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-339
+2025-12-01 20:57:32,405 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-339
+2025-12-01 20:57:32,406 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-340
+2025-12-01 20:57:32,406 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-340
+2025-12-01 20:57:32,425 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-345
+2025-12-01 20:57:32,425 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-345
+2025-12-01 20:57:32,439 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-347
+2025-12-01 20:57:32,439 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-347
+2025-12-01 20:57:32,449 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-349
+2025-12-01 20:57:32,449 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-346
+2025-12-01 20:57:32,449 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-343
+2025-12-01 20:57:32,449 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-349
+2025-12-01 20:57:32,449 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-346
+2025-12-01 20:57:32,449 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-343
+2025-12-01 20:57:32,470 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-355
+2025-12-01 20:57:32,470 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-355
+2025-12-01 20:57:32,473 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-341
+2025-12-01 20:57:32,473 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-372
+2025-12-01 20:57:32,473 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-350
+2025-12-01 20:57:32,473 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-341
+2025-12-01 20:57:32,473 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-350
+2025-12-01 20:57:32,474 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-372
+2025-12-01 20:57:32,476 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-348
+2025-12-01 20:57:32,476 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-351
+2025-12-01 20:57:32,476 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-348
+2025-12-01 20:57:32,476 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-351
+2025-12-01 20:57:32,484 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-344
+2025-12-01 20:57:32,484 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-344
+2025-12-01 20:57:32,487 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-353
+2025-12-01 20:57:32,487 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-363
+2025-12-01 20:57:32,487 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-353
+2025-12-01 20:57:32,487 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-363
+2025-12-01 20:57:32,490 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-338
+2025-12-01 20:57:32,490 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-371
+2025-12-01 20:57:32,491 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-338
+2025-12-01 20:57:32,491 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-371
+2025-12-01 20:57:32,490 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-370
+2025-12-01 20:57:32,490 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-368
+2025-12-01 20:57:32,491 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-370
+2025-12-01 20:57:32,491 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-368
+2025-12-01 20:57:32,494 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-367
+2025-12-01 20:57:32,494 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-367
+2025-12-01 20:57:32,504 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-369
+2025-12-01 20:57:32,504 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-369
+2025-12-01 20:57:32,514 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-381
+2025-12-01 20:57:32,514 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-378
+2025-12-01 20:57:32,514 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-388
+2025-12-01 20:57:32,514 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-388
+2025-12-01 20:57:32,514 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-378
+2025-12-01 20:57:32,514 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-381
+2025-12-01 20:57:32,517 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-374
+2025-12-01 20:57:32,517 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-374
+2025-12-01 20:57:32,525 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-383
+2025-12-01 20:57:32,525 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-383
+2025-12-01 20:57:32,531 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-375
+2025-12-01 20:57:32,531 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-375
+2025-12-01 20:57:32,539 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-379
+2025-12-01 20:57:32,539 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-377
+2025-12-01 20:57:32,539 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-379
+2025-12-01 20:57:32,539 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-377
+2025-12-01 20:57:32,539 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-373
+2025-12-01 20:57:32,539 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-382
+2025-12-01 20:57:32,539 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-373
+2025-12-01 20:57:32,539 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-382
+2025-12-01 20:57:32,553 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-376
+2025-12-01 20:57:32,553 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-376
+2025-12-01 20:57:32,578 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-389
+2025-12-01 20:57:32,578 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-396
+2025-12-01 20:57:32,578 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-395
+2025-12-01 20:57:32,578 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-396
+2025-12-01 20:57:32,578 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-389
+2025-12-01 20:57:32,578 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-395
+2025-12-01 20:57:32,583 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-398
+2025-12-01 20:57:32,584 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-398
+2025-12-01 20:57:32,594 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-394
+2025-12-01 20:57:32,594 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-399
+2025-12-01 20:57:32,594 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-400
+2025-12-01 20:57:32,595 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-394
+2025-12-01 20:57:32,595 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-400
+2025-12-01 20:57:32,595 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-386
+2025-12-01 20:57:32,595 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-386
+2025-12-01 20:57:32,595 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-399
+2025-12-01 20:57:32,596 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-387
+2025-12-01 20:57:32,596 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-387
+2025-12-01 20:57:32,605 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-384
+2025-12-01 20:57:32,605 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-385
+2025-12-01 20:57:32,606 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-384
+2025-12-01 20:57:32,605 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-397
+2025-12-01 20:57:32,606 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-397
+2025-12-01 20:57:32,606 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-385
+2025-12-01 20:57:32,615 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-393
+2025-12-01 20:57:32,615 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-393
+2025-12-01 20:57:32,622 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-380
+2025-12-01 20:57:32,622 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-380
+2025-12-01 20:58:00,184 INFO o.a.j.r.Summariser: summary +    166 in 00:00:30 =    5,6/s Avg: 69485 Min: 32632 Max: 95650 Err:   159 (95,78%) Active: 197 Started: 451 Finished: 254
+2025-12-01 20:58:00,185 INFO o.a.j.r.Summariser: summary =   5803 in 00:36:53 =    2,6/s Avg: 158575 Min:  3147 Max: 1042338 Err:  5602 (96,54%)
+2025-12-01 20:58:30,075 INFO o.a.j.r.Summariser: summary +    175 in 00:00:30 =    5,9/s Avg: 43329 Min:  2402 Max: 123432 Err:   163 (93,14%) Active: 197 Started: 451 Finished: 254
+2025-12-01 20:58:30,077 INFO o.a.j.r.Summariser: summary =   5978 in 00:37:23 =    2,7/s Avg: 155201 Min:  2402 Max: 1042338 Err:  5765 (96,44%)
+2025-12-01 20:59:00,868 INFO o.a.j.r.Summariser: summary +    140 in 00:00:31 =    4,5/s Avg: 24111 Min:  1194 Max: 122603 Err:   138 (98,57%) Active: 197 Started: 451 Finished: 254
+2025-12-01 20:59:00,869 INFO o.a.j.r.Summariser: summary =   6118 in 00:37:54 =    2,7/s Avg: 152201 Min:  1194 Max: 1042338 Err:  5903 (96,49%)
+2025-12-01 20:59:05,041 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-70
+2025-12-01 20:59:05,041 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-70
+2025-12-01 20:59:05,056 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-3
+2025-12-01 20:59:05,056 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-3
+2025-12-01 20:59:05,076 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-73
+2025-12-01 20:59:05,076 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-73
+2025-12-01 20:59:05,086 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-2
+2025-12-01 20:59:05,086 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-2
+2025-12-01 20:59:30,872 INFO o.a.j.r.Summariser: summary +     34 in 00:00:30 =    1,1/s Avg: 57606 Min: 30320 Max: 86003 Err:    34 (100,00%) Active: 193 Started: 451 Finished: 258
+2025-12-01 20:59:30,873 INFO o.a.j.r.Summariser: summary =   6152 in 00:38:24 =    2,7/s Avg: 151678 Min:  1194 Max: 1042338 Err:  5937 (96,51%)
+2025-12-01 20:59:30,873 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-6
+2025-12-01 20:59:30,873 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-6
+2025-12-01 20:59:31,080 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-1
+2025-12-01 20:59:31,080 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-1
+2025-12-01 20:59:31,104 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-69
+2025-12-01 20:59:31,104 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-69
+2025-12-01 20:59:31,121 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-181
+2025-12-01 20:59:31,121 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-181
+2025-12-01 20:59:31,264 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-168
+2025-12-01 20:59:31,265 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-168
+2025-12-01 20:59:31,310 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-195
+2025-12-01 20:59:31,311 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-195
+2025-12-01 20:59:31,313 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-166
+2025-12-01 20:59:31,313 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-166
+2025-12-01 20:59:31,315 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-177
+2025-12-01 20:59:31,316 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-177
+2025-12-01 20:59:31,516 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-115
+2025-12-01 20:59:31,516 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-115
+2025-12-01 20:59:31,540 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-169
+2025-12-01 20:59:31,540 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-169
+2025-12-01 20:59:31,665 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-171
+2025-12-01 20:59:31,665 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-171
+2025-12-01 20:59:31,669 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-172
+2025-12-01 20:59:31,669 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-172
+2025-12-01 20:59:31,797 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-192
+2025-12-01 20:59:31,797 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-192
+2025-12-01 20:59:32,175 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-182
+2025-12-01 20:59:32,175 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-182
+2025-12-01 20:59:32,180 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-189
+2025-12-01 20:59:32,180 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-189
+2025-12-01 20:59:32,697 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-187
+2025-12-01 20:59:32,697 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-187
+2025-12-01 20:59:32,714 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-193
+2025-12-01 20:59:32,714 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-193
+2025-12-01 20:59:33,490 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-199
+2025-12-01 20:59:33,491 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-199
+2025-12-01 20:59:34,995 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-206
+2025-12-01 20:59:34,995 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-206
+2025-12-01 20:59:35,052 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-200
+2025-12-01 20:59:35,052 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-200
+2025-12-01 20:59:35,066 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-208
+2025-12-01 20:59:35,067 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-208
+2025-12-01 20:59:35,069 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-201
+2025-12-01 20:59:35,069 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-201
+2025-12-01 20:59:35,120 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-204
+2025-12-01 20:59:35,120 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-204
+2025-12-01 20:59:35,124 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-207
+2025-12-01 20:59:35,124 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-207
+2025-12-01 21:00:00,772 INFO o.a.j.r.Summariser: summary +     43 in 00:00:30 =    1,4/s Avg: 90050 Min: 59998 Max: 150971 Err:    36 (83,72%) Active: 169 Started: 451 Finished: 282
+2025-12-01 21:00:00,773 INFO o.a.j.r.Summariser: summary =   6195 in 00:38:54 =    2,7/s Avg: 151251 Min:  1194 Max: 1042338 Err:  5973 (96,42%)
+2025-12-01 21:00:00,773 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-216
+2025-12-01 21:00:00,773 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-216
+2025-12-01 21:00:00,880 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-202
+2025-12-01 21:00:00,880 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-202
+2025-12-01 21:00:01,111 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-209
+2025-12-01 21:00:01,111 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-209
+2025-12-01 21:00:01,130 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-210
+2025-12-01 21:00:01,131 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-210
+2025-12-01 21:00:01,810 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-213
+2025-12-01 21:00:01,810 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-213
+2025-12-01 21:00:02,195 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-223
+2025-12-01 21:00:02,195 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-223
+2025-12-01 21:00:02,202 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-224
+2025-12-01 21:00:02,202 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-224
+2025-12-01 21:00:02,265 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-226
+2025-12-01 21:00:02,265 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-226
+2025-12-01 21:00:02,705 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-218
+2025-12-01 21:00:02,705 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-218
+2025-12-01 21:00:02,733 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-212
+2025-12-01 21:00:02,734 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-212
+2025-12-01 21:00:02,840 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-214
+2025-12-01 21:00:02,841 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-214
+2025-12-01 21:00:02,843 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-225
+2025-12-01 21:00:02,843 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-225
+2025-12-01 21:00:02,849 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-220
+2025-12-01 21:00:02,849 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-220
+2025-12-01 21:00:05,060 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-211
+2025-12-01 21:00:05,060 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-211
+2025-12-01 21:00:05,064 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-236
+2025-12-01 21:00:05,064 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-236
+2025-12-01 21:00:05,067 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-219
+2025-12-01 21:00:05,067 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-219
+2025-12-01 21:00:05,089 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-185
+2025-12-01 21:00:05,089 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-185
+2025-12-01 21:00:05,091 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-197
+2025-12-01 21:00:05,091 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-197
+2025-12-01 21:00:05,098 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-174
+2025-12-01 21:00:05,098 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-174
+2025-12-01 21:00:05,110 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-188
+2025-12-01 21:00:05,110 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-188
+2025-12-01 21:00:05,312 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-203
+2025-12-01 21:00:05,312 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-203
+2025-12-01 21:00:05,454 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-205
+2025-12-01 21:00:05,454 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-205
+2025-12-01 21:00:05,739 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-231
+2025-12-01 21:00:05,739 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-231
+2025-12-01 21:00:05,759 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-221
+2025-12-01 21:00:05,759 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-215
+2025-12-01 21:00:05,759 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-228
+2025-12-01 21:00:05,759 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-221
+2025-12-01 21:00:05,760 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-228
+2025-12-01 21:00:05,759 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-215
+2025-12-01 21:00:31,333 INFO o.a.j.r.Summariser: summary +     97 in 00:00:31 =    3,2/s Avg: 83603 Min:  2890 Max: 153371 Err:    79 (81,44%) Active: 143 Started: 451 Finished: 308
+2025-12-01 21:00:31,333 INFO o.a.j.r.Summariser: summary =   6292 in 00:39:24 =    2,7/s Avg: 150208 Min:  1194 Max: 1042338 Err:  6052 (96,19%)
+2025-12-01 21:00:31,342 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-247
+2025-12-01 21:00:31,342 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-247
+2025-12-01 21:00:31,342 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-54
+2025-12-01 21:00:31,343 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-54
+2025-12-01 21:00:31,363 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-53
+2025-12-01 21:00:31,363 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-53
+2025-12-01 21:00:31,526 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-237
+2025-12-01 21:00:31,526 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-237
+2025-12-01 21:00:31,534 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-55
+2025-12-01 21:00:31,534 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-55
+2025-12-01 21:00:31,549 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-240
+2025-12-01 21:00:31,549 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-240
+2025-12-01 21:00:31,570 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-52
+2025-12-01 21:00:31,570 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-52
+2025-12-01 21:00:31,587 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-62
+2025-12-01 21:00:31,599 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-62
+2025-12-01 21:00:31,829 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-61
+2025-12-01 21:00:31,829 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-61
+2025-12-01 21:00:31,831 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-99
+2025-12-01 21:00:31,832 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-99
+2025-12-01 21:00:31,835 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-57
+2025-12-01 21:00:31,835 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-274
+2025-12-01 21:00:31,835 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-57
+2025-12-01 21:00:31,835 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-274
+2025-12-01 21:00:31,836 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-103
+2025-12-01 21:00:31,837 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-103
+2025-12-01 21:00:31,839 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-101
+2025-12-01 21:00:31,839 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-101
+2025-12-01 21:00:31,928 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-250
+2025-12-01 21:00:31,928 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-250
+2025-12-01 21:00:32,192 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-256
+2025-12-01 21:00:32,192 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-256
+2025-12-01 21:00:32,206 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-245
+2025-12-01 21:00:32,206 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-245
+2025-12-01 21:00:32,208 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-271
+2025-12-01 21:00:32,208 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-271
+2025-12-01 21:00:32,273 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-233
+2025-12-01 21:00:32,274 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-233
+2025-12-01 21:00:32,285 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-234
+2025-12-01 21:00:32,285 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-234
+2025-12-01 21:00:32,285 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-244
+2025-12-01 21:00:32,286 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-244
+2025-12-01 21:00:32,531 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-217
+2025-12-01 21:00:32,531 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-217
+2025-12-01 21:00:32,539 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-222
+2025-12-01 21:00:32,539 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-222
+2025-12-01 21:00:32,610 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-10
+2025-12-01 21:00:32,611 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-10
+2025-12-01 21:00:32,616 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-229
+2025-12-01 21:00:32,616 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-229
+2025-12-01 21:00:32,681 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-11
+2025-12-01 21:00:32,681 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-242
+2025-12-01 21:00:32,681 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-11
+2025-12-01 21:00:32,681 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-242
+2025-12-01 21:00:32,693 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-15
+2025-12-01 21:00:32,693 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-15
+2025-12-01 21:00:32,697 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-14
+2025-12-01 21:00:32,697 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-14
+2025-12-01 21:00:32,699 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-235
+2025-12-01 21:00:32,699 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-235
+2025-12-01 21:00:32,802 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-17
+2025-12-01 21:00:32,802 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-18
+2025-12-01 21:00:32,802 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-17
+2025-12-01 21:00:32,802 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-18
+2025-12-01 21:00:32,812 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-19
+2025-12-01 21:00:32,812 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-16
+2025-12-01 21:00:32,812 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-21
+2025-12-01 21:00:32,812 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-16
+2025-12-01 21:00:32,812 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-21
+2025-12-01 21:00:32,812 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-19
+2025-12-01 21:00:32,817 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-20
+2025-12-01 21:00:32,817 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-20
+2025-12-01 21:00:32,820 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-24
+2025-12-01 21:00:32,820 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-24
+2025-12-01 21:00:32,822 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-230
+2025-12-01 21:00:32,822 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-230
+2025-12-01 21:00:32,832 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-22
+2025-12-01 21:00:32,832 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-26
+2025-12-01 21:00:32,832 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-22
+2025-12-01 21:00:32,833 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-26
+2025-12-01 21:00:32,839 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-28
+2025-12-01 21:00:32,839 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-105
+2025-12-01 21:00:32,839 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-28
+2025-12-01 21:00:32,839 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-105
+2025-12-01 21:00:32,839 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-100
+2025-12-01 21:00:32,839 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-100
+2025-12-01 21:00:32,857 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-232
+2025-12-01 21:00:32,857 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-232
+2025-12-01 21:00:32,857 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-238
+2025-12-01 21:00:32,857 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-238
+2025-12-01 21:00:32,857 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-252
+2025-12-01 21:00:32,857 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-252
+2025-12-01 21:01:01,348 INFO o.a.j.r.Summariser: summary +     63 in 00:00:30 =    2,1/s Avg: 85495 Min: 27156 Max: 148516 Err:    48 (76,19%) Active: 97 Started: 451 Finished: 354
+2025-12-01 21:01:01,348 INFO o.a.j.r.Summariser: summary =   6355 in 00:39:54 =    2,7/s Avg: 149566 Min:  1194 Max: 1042338 Err:  6100 (95,99%)
+2025-12-01 21:01:01,349 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-23
+2025-12-01 21:01:01,349 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-23
+2025-12-01 21:01:02,226 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-241
+2025-12-01 21:01:02,226 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-241
+2025-12-01 21:01:02,233 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-246
+2025-12-01 21:01:02,233 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-243
+2025-12-01 21:01:02,233 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-246
+2025-12-01 21:01:02,233 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-243
+2025-12-01 21:01:02,243 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-251
+2025-12-01 21:01:02,244 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-251
+2025-12-01 21:01:02,438 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-30
+2025-12-01 21:01:02,438 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-30
+2025-12-01 21:01:02,441 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-253
+2025-12-01 21:01:02,441 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-253
+2025-12-01 21:01:02,444 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-29
+2025-12-01 21:01:02,444 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-29
+2025-12-01 21:01:02,447 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-32
+2025-12-01 21:01:02,448 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-32
+2025-12-01 21:01:02,450 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-254
+2025-12-01 21:01:02,450 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-254
+2025-12-01 21:01:02,461 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-37
+2025-12-01 21:01:02,461 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-37
+2025-12-01 21:01:02,504 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-39
+2025-12-01 21:01:02,504 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-249
+2025-12-01 21:01:02,504 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-39
+2025-12-01 21:01:02,504 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-249
+2025-12-01 21:01:02,517 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-42
+2025-12-01 21:01:02,518 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-42
+2025-12-01 21:01:02,522 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-227
+2025-12-01 21:01:02,522 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-227
+2025-12-01 21:01:02,522 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-38
+2025-12-01 21:01:02,522 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-38
+2025-12-01 21:01:02,541 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-45
+2025-12-01 21:01:02,541 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-45
+2025-12-01 21:01:02,541 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-41
+2025-12-01 21:01:02,541 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-41
+2025-12-01 21:01:02,542 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-239
+2025-12-01 21:01:02,542 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-239
+2025-12-01 21:01:02,542 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-44
+2025-12-01 21:01:02,543 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-44
+2025-12-01 21:01:02,547 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-49
+2025-12-01 21:01:02,547 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-43
+2025-12-01 21:01:02,547 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-49
+2025-12-01 21:01:02,547 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-43
+2025-12-01 21:01:02,557 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-50
+2025-12-01 21:01:02,557 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-50
+2025-12-01 21:01:02,725 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-46
+2025-12-01 21:01:02,725 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-46
+2025-12-01 21:01:02,918 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-47
+2025-12-01 21:01:02,918 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-47
+2025-12-01 21:01:02,918 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-48
+2025-12-01 21:01:02,921 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-48
+2025-12-01 21:01:03,280 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-332
+2025-12-01 21:01:03,280 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-332
+2025-12-01 21:01:03,387 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-331
+2025-12-01 21:01:03,388 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-331
+2025-12-01 21:01:03,535 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-321
+2025-12-01 21:01:03,535 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-321
+2025-12-01 21:01:03,654 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-322
+2025-12-01 21:01:03,654 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-322
+2025-12-01 21:01:03,681 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-335
+2025-12-01 21:01:03,681 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-335
+2025-12-01 21:01:03,780 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-326
+2025-12-01 21:01:03,780 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-326
+2025-12-01 21:01:03,823 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-333
+2025-12-01 21:01:03,824 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-333
+2025-12-01 21:01:03,828 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-329
+2025-12-01 21:01:03,829 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-329
+2025-12-01 21:01:03,932 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-334
+2025-12-01 21:01:03,932 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-334
+2025-12-01 21:01:03,932 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-328
+2025-12-01 21:01:03,932 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-328
+2025-12-01 21:01:04,025 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-330
+2025-12-01 21:01:04,025 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-330
+2025-12-01 21:01:04,152 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-310
+2025-12-01 21:01:04,152 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-310
+2025-12-01 21:01:04,629 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-173
+2025-12-01 21:01:04,629 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-173
+2025-12-01 21:01:04,914 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-186
+2025-12-01 21:01:04,915 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-186
+2025-12-01 21:01:04,992 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-184
+2025-12-01 21:01:04,992 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-184
+2025-12-01 21:01:05,063 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-190
+2025-12-01 21:01:05,063 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-178
+2025-12-01 21:01:05,063 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-176
+2025-12-01 21:01:05,063 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-170
+2025-12-01 21:01:05,063 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-178
+2025-12-01 21:01:05,063 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-170
+2025-12-01 21:01:05,063 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-190
+2025-12-01 21:01:05,063 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-176
+2025-12-01 21:01:05,406 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-175
+2025-12-01 21:01:05,406 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-191
+2025-12-01 21:01:05,407 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-191
+2025-12-01 21:01:05,407 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-180
+2025-12-01 21:01:05,407 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-175
+2025-12-01 21:01:05,407 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-180
+2025-12-01 21:01:05,407 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-179
+2025-12-01 21:01:05,407 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-179
+2025-12-01 21:01:05,407 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-194
+2025-12-01 21:01:05,408 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-194
+2025-12-01 21:01:06,090 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-196
+2025-12-01 21:01:06,091 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-196
+2025-12-01 21:01:06,108 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-198
+2025-12-01 21:01:06,108 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-198
+2025-12-01 21:01:06,356 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-336
+2025-12-01 21:01:06,356 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-336
+2025-12-01 21:01:06,381 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-56
+2025-12-01 21:01:06,381 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-325
+2025-12-01 21:01:06,381 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-5
+2025-12-01 21:01:06,381 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-327
+2025-12-01 21:01:06,381 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-56
+2025-12-01 21:01:06,381 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-324
+2025-12-01 21:01:06,381 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-325
+2025-12-01 21:01:06,381 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-324
+2025-12-01 21:01:06,381 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-5
+2025-12-01 21:01:06,381 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-327
+2025-12-01 21:01:06,446 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-6
+2025-12-01 21:01:06,446 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-6
+2025-12-01 21:01:06,474 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-359
+2025-12-01 21:01:06,475 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-359
+2025-12-01 21:01:06,488 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-4
+2025-12-01 21:01:06,488 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-9
+2025-12-01 21:01:06,488 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-8
+2025-12-01 21:01:06,489 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-9
+2025-12-01 21:01:06,489 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-8
+2025-12-01 21:01:06,489 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-4
+2025-12-01 21:01:06,488 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-2
+2025-12-01 21:01:06,488 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-12
+2025-12-01 21:01:06,489 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-2
+2025-12-01 21:01:06,489 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-12
+2025-12-01 21:01:06,525 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-3
+2025-12-01 21:01:06,525 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-7
+2025-12-01 21:01:06,525 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-3
+2025-12-01 21:01:06,525 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-33
+2025-12-01 21:01:06,525 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-7
+2025-12-01 21:01:06,525 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-33
+2025-12-01 21:01:06,531 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-1
+2025-12-01 21:01:06,531 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-1
+2025-12-01 21:01:06,603 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-13
+2025-12-01 21:01:06,603 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-13
+2025-12-01 21:01:06,618 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-102
+2025-12-01 21:01:06,618 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-102
+2025-12-01 21:01:06,759 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-183
+2025-12-01 21:01:06,760 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-183
+2025-12-01 21:01:07,074 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-31
+2025-12-01 21:01:07,074 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-36
+2025-12-01 21:01:07,074 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-31
+2025-12-01 21:01:07,074 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-36
+2025-12-01 21:01:07,090 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-35
+2025-12-01 21:01:07,091 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-35
+2025-12-01 21:01:07,119 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-40
+2025-12-01 21:01:07,120 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-40
+2025-12-01 21:01:08,182 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-308
+2025-12-01 21:01:08,182 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-308
+2025-12-01 21:01:08,253 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-135
+2025-12-01 21:01:08,253 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-104
+2025-12-01 21:01:08,253 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-135
+2025-12-01 21:01:08,253 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-104
+2025-12-01 21:01:08,399 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-27
+2025-12-01 21:01:08,400 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-27
+2025-12-01 21:01:08,409 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-25
+2025-12-01 21:01:08,410 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-25
+2025-12-01 21:01:08,507 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-391
+2025-12-01 21:01:08,507 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-391
+2025-12-01 21:01:08,815 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-390
+2025-12-01 21:01:08,815 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-361
+2025-12-01 21:01:08,815 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-390
+2025-12-01 21:01:08,815 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-361
+2025-12-01 21:01:08,815 INFO o.a.j.t.JMeterThread: Thread is done: Load 10 users 2-34
+2025-12-01 21:01:08,815 INFO o.a.j.t.JMeterThread: Thread finished: Load 10 users 2-34
+2025-12-01 21:01:08,827 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-365
+2025-12-01 21:01:08,827 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-354
+2025-12-01 21:01:08,827 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-365
+2025-12-01 21:01:08,827 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-309
+2025-12-01 21:01:08,827 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-309
+2025-12-01 21:01:08,827 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-354
+2025-12-01 21:01:08,974 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-360
+2025-12-01 21:01:08,975 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-360
+2025-12-01 21:01:08,977 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-366
+2025-12-01 21:01:08,977 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-366
+2025-12-01 21:01:09,061 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-356
+2025-12-01 21:01:09,061 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-364
+2025-12-01 21:01:09,061 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-364
+2025-12-01 21:01:09,061 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-356
+2025-12-01 21:01:09,384 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-358
+2025-12-01 21:01:09,384 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-357
+2025-12-01 21:01:09,384 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-358
+2025-12-01 21:01:09,384 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-392
+2025-12-01 21:01:09,384 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-357
+2025-12-01 21:01:09,385 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-362
+2025-12-01 21:01:09,385 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-362
+2025-12-01 21:01:09,385 INFO o.a.j.t.JMeterThread: Thread is done: Stress variable users 3-352
+2025-12-01 21:01:09,385 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-352
+2025-12-01 21:01:09,385 INFO o.a.j.t.JMeterThread: Thread finished: Stress variable users 3-392
+2025-12-01 21:01:09,386 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-12-01 21:01:09,390 INFO o.a.j.r.Summariser: summary +    302 in 00:00:08 =   37,5/s Avg: 26797 Min:     3 Max: 152715 Err:   151 (50,00%) Active: 0 Started: 451 Finished: 451
+2025-12-01 21:01:09,391 INFO o.a.j.r.Summariser: summary =   6657 in 00:40:02 =    2,8/s Avg: 143997 Min:     3 Max: 1042338 Err:  6251 (93,90%)
+Err:    26 (50,98%) Active: 0 Started: 451 Finished: 451
+2025-12-01 21:01:08,444 INFO o.a.j.r.Summariser: summary =   6657 in 00:45:20 =    2,4/s Avg: 123138 Min:     0 Max: 971285 Err:  5514 (82,83%)
